@@ -63,4 +63,12 @@
  */
 + (NSTimeInterval)timeIntervalWithString:(NSString *)dateString;
 
+//统一收键盘
++ (void)sk_closeKeyboard;
+
+/**
+ 删除NSUserDefaults所有记录
+ */
++ (void)clearUserDefaults;
+
 @end

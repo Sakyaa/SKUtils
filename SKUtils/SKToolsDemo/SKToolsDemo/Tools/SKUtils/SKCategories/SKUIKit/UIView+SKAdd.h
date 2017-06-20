@@ -10,6 +10,19 @@
 
 @interface UIView (SKAdd)
 
+
+
+/**
+ 获取当前的控制器
+ */
 @property (nullable, nonatomic, readonly) UIViewController *topViewController;
+
+
+/**
+ 清除所有子视图
+ */
+- (void)sk_clearAllSubviews;
+
+
 
 @end

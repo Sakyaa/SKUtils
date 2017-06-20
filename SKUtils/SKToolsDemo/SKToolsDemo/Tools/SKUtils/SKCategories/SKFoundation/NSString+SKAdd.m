@@ -61,8 +61,7 @@
  *  @param font   字体(默认为系统字体)
  *  @param height 约束高度
  */
-- (CGFloat)widthWithFont:(UIFont *)font constrainedToHeight:(CGFloat)height
-{
+- (CGFloat)widthWithFont:(UIFont *)font constrainedToHeight:(CGFloat)height {
     UIFont *textFont = font ? font : [UIFont systemFontOfSize:[UIFont systemFontSize]];
     
     CGSize textSize;
@@ -104,8 +103,7 @@
  *  @param font  字体(默认为系统字体)
  *  @param width 约束宽度
  */
-- (CGSize)sizeWithFont:(UIFont *)font constrainedToWidth:(CGFloat)width
-{
+- (CGSize)sizeWithFont:(UIFont *)font constrainedToWidth:(CGFloat)width {
     UIFont *textFont = font ? font : [UIFont systemFontOfSize:[UIFont systemFontSize]];
     
     CGSize textSize;
@@ -147,8 +145,7 @@
  *  @param font   字体(默认为系统字体)
  *  @param height 约束高度
  */
-- (CGSize)sizeWithFont:(UIFont *)font constrainedToHeight:(CGFloat)height
-{
+- (CGSize)sizeWithFont:(UIFont *)font constrainedToHeight:(CGFloat)height {
     UIFont *textFont = font ? font : [UIFont systemFontOfSize:[UIFont systemFontSize]];
     
     CGSize textSize;
@@ -186,8 +183,7 @@
 
 
 
-+ (NSString *)reverseString:(NSString *)strSrc
-{
++ (NSString *)reverseString:(NSString *)strSrc {
     NSMutableString* reverseString = [[NSMutableString alloc] init];
     NSInteger charIndex = [strSrc length];
     while (charIndex > 0) {
@@ -198,8 +194,7 @@
     return reverseString;
 }
 
-- (CGFloat)boundingHeightWithSize:(CGSize)size font:(UIFont*)font
-{
+- (CGFloat)boundingHeightWithSize:(CGSize)size font:(UIFont*)font {
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     paragraphStyle.headIndent = 14;
     CGFloat orginalFloat = [self boundingHeightWithSize:size font:font paragraphStyle:paragraphStyle];
@@ -207,8 +202,7 @@
 }
 
 
-- (CGFloat)boundingHeightWithSize:(CGSize)size font:(UIFont*)font paragraphStyle:(NSMutableParagraphStyle *)paragraphStyle
-{
+- (CGFloat)boundingHeightWithSize:(CGSize)size font:(UIFont*)font paragraphStyle:(NSMutableParagraphStyle *)paragraphStyle {
     NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:self];
     [attributeString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, self.length)];
     [attributeString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, self.length)];
@@ -246,6 +240,7 @@
             && self != nil);
 }
 - (BOOL)isBankCard {
+    
     if(self.length==0) {
         return NO;
     }
@@ -292,7 +287,64 @@
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES%@",emailCheck];
     return [emailTest evaluateWithObject:self];
 }
+//手机号分服务商
+- (BOOL)isMobileNumberClassification {
+    /**
+     * 手机号码
+     * 移动：134[0-8],135,136,137,138,139,150,151,157,158,159,182,187,188,1705
+     * 联通：130,131,132,152,155,156,185,186,1709
+     * 电信：133,1349,153,180,189,1700,173
+     */
+    //    NSString * MOBILE = @"^1((3//d|5[0-35-9]|8[025-9])//d|70[059])\\d{7}$";//总况
+    
+    /**
+     10         * 中国移动：China Mobile
+     11         * 134[0-8],135,136,137,138,139,150,151,157,158,159,182,187,188，1705
+     12         */
+    NSString * CM = @"^1(34[0-8]|(3[5-9]|5[017-9]|8[278])\\d|705)\\d{7}$";
+    /**
+     15         * 中国联通：China Unicom
+     16         * 130,131,132,152,155,156,185,186,1709
+     17         */
+    NSString * CU = @"^1((3[0-2]|5[256]|8[56])\\d|709)\\d{7}$";
+    /**
+     20         * 中国电信：China Telecom
+     21         * 133,1349,153,180,189,1700,173
+     22         */
+    NSString * CT = @"^1((33|53|73|8[09])\\d|349|700)\\d{7}$";
+    
+    
+    /**
+     25         * 大陆地区固话及小灵通
+     26         * 区号：010,020,021,022,023,024,025,027,028,029
+     27         * 号码：七位或八位
+     28         */
+    NSString * PHS = @"^0(10|2[0-5789]|\\d{3})\\d{7,8}$";
+    
+    
+    //    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
+    
+    if (([self isValidateByRegex:CM])
+        || ([self isValidateByRegex:CU])
+        || ([self isValidateByRegex:CT])
+        || ([self isValidateByRegex:PHS])) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
 
+//手机号有效性
+- (BOOL)isMobileNumber {
+    NSString *mobileRegex = @"^(0|86|17951)?(13[0-9]|15[012356789]|17[0678]|18[0-9]|14[57])[0-9]{8}$";
+    BOOL ret1 = [self isValidateByRegex:mobileRegex];
+    return ret1;
+}
+#pragma mark - 正则相关
+- (BOOL)isValidateByRegex:(NSString *)regex {
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+    return [pre evaluateWithObject:self];
+}
 //****************加密数据*****************
 //
 - (NSString *)sk_hmacMD5StringWithKey:(NSString *)key {

@@ -171,4 +171,25 @@
     NSTimeInterval getTimeIntervla = [getDate timeIntervalSince1970];
     return getTimeIntervla;
 }
++ (void)sk_closeKeyboard {
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
+}
++ (void)clearUserDefaults {
+    
+    //方法一
+    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+    /**
+    //方法二
+
+    NSUserDefaults * defs = [NSUserDefaults standardUserDefaults];
+    NSDictionary * dict = [defs dictionaryRepresentation];
+    for (id key in dict) {
+        [defs removeObjectForKey:key];
+    }
+    [defs synchronize];
+    // 方法三
+    [[NSUserDefaults standardUserDefaults] setPersistentDomain:[NSDictionary dictionary] forName:[[NSBundle mainBundle] bundleIdentifier]];
+     */
+}
 @end

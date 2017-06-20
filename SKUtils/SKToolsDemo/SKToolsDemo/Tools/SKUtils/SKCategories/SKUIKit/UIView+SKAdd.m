@@ -19,4 +19,9 @@
     }
     return nil;
 }
+- (void)sk_clearAllSubviews {
+    
+    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
+}
 @end
