@@ -11,6 +11,11 @@
 
 @interface SKHelper : NSObject
 
+
+//版本升级管理
++ (void)appVersionDetected;
+
+
 //获取视图
 // 获取当前处于activity状态的view controller
 + (UIViewController *)activityViewController;
@@ -41,7 +46,6 @@
 
 /**
  数组排序
-
  @param originalArray 输入数据
  @param key 排序的key
  @param sequence 是否是顺序
@@ -58,14 +62,12 @@
 
 /**
  字符串转时间戳项目中用到
- 
  @param dateString 日期字符串
  */
 + (NSTimeInterval)timeIntervalWithString:(NSString *)dateString;
 
 //统一收键盘
 + (void)sk_closeKeyboard;
-
 /**
  删除NSUserDefaults所有记录
  */

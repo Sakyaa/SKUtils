@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		364D1C171EFA4A8A00AC2595 /* NSObject+SKAddForKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D1C161EFA4A8A00AC2595 /* NSObject+SKAddForKVO.m */; };
+		364D1C1A1EFA523D00AC2595 /* UIApplication+SKAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D1C191EFA523D00AC2595 /* UIApplication+SKAdd.m */; };
+		364D1C1D1EFA52F700AC2595 /* UIDevice+SKAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D1C1C1EFA52F700AC2595 /* UIDevice+SKAdd.m */; };
 		3654BE871EEC479E00DFE727 /* NSData+SKAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3654BE681EEC479E00DFE727 /* NSData+SKAdd.m */; };
 		3654BE881EEC479E00DFE727 /* NSDate+SKAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3654BE6A1EEC479E00DFE727 /* NSDate+SKAdd.m */; };
 		3654BE891EEC479E00DFE727 /* NSMutableDictionary+SKAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3654BE6C1EEC479E00DFE727 /* NSMutableDictionary+SKAdd.m */; };
@@ -60,6 +62,10 @@
 /* Begin PBXFileReference section */
 		364D1C151EFA4A8A00AC2595 /* NSObject+SKAddForKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SKAddForKVO.h"; sourceTree = "<group>"; };
 		364D1C161EFA4A8A00AC2595 /* NSObject+SKAddForKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SKAddForKVO.m"; sourceTree = "<group>"; };
+		364D1C181EFA523D00AC2595 /* UIApplication+SKAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+SKAdd.h"; sourceTree = "<group>"; };
+		364D1C191EFA523D00AC2595 /* UIApplication+SKAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+SKAdd.m"; sourceTree = "<group>"; };
+		364D1C1B1EFA52F700AC2595 /* UIDevice+SKAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+SKAdd.h"; sourceTree = "<group>"; };
+		364D1C1C1EFA52F700AC2595 /* UIDevice+SKAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+SKAdd.m"; sourceTree = "<group>"; };
 		3654BE671EEC479E00DFE727 /* NSData+SKAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SKAdd.h"; sourceTree = "<group>"; };
 		3654BE681EEC479E00DFE727 /* NSData+SKAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SKAdd.m"; sourceTree = "<group>"; };
 		3654BE691EEC479E00DFE727 /* NSDate+SKAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+SKAdd.h"; sourceTree = "<group>"; };
@@ -203,6 +209,10 @@
 		3654BE711EEC479E00DFE727 /* SKUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				364D1C181EFA523D00AC2595 /* UIApplication+SKAdd.h */,
+				364D1C191EFA523D00AC2595 /* UIApplication+SKAdd.m */,
+				364D1C1B1EFA52F700AC2595 /* UIDevice+SKAdd.h */,
+				364D1C1C1EFA52F700AC2595 /* UIDevice+SKAdd.m */,
 				3654BE721EEC479E00DFE727 /* UIColor+SKAdd.h */,
 				3654BE731EEC479E00DFE727 /* UIColor+SKAdd.m */,
 				3654BE741EEC479E00DFE727 /* UIControl+SKAdd.h */,
@@ -469,6 +479,7 @@
 				3654BE871EEC479E00DFE727 /* NSData+SKAdd.m in Sources */,
 				3654BE891EEC479E00DFE727 /* NSMutableDictionary+SKAdd.m in Sources */,
 				3654BE901EEC479E00DFE727 /* NSArray+Safe.m in Sources */,
+				364D1C1A1EFA523D00AC2595 /* UIApplication+SKAdd.m in Sources */,
 				36DE249D1EEF962B00ACD4C3 /* UIView+SKAdd.m in Sources */,
 				3654BE8D1EEC479E00DFE727 /* UIControl+SKAdd.m in Sources */,
 				3654BE8C1EEC479E00DFE727 /* UIColor+SKAdd.m in Sources */,
@@ -481,6 +492,7 @@
 				3654BE8E1EEC479E00DFE727 /* UITextField+IndexPath.m in Sources */,
 				3654BE931EEC479E00DFE727 /* NSMutableString+Safe.m in Sources */,
 				36FE8A111EE97A4B00E733B8 /* main.m in Sources */,
+				364D1C1D1EFA52F700AC2595 /* UIDevice+SKAdd.m in Sources */,
 				36DE22A31EEE569600ACD4C3 /* UIImageView+SKAdd.m in Sources */,
 				36CEBCB41EF38C3F00442CDE /* NSTimer+SKAdd.m in Sources */,
 				3654BE881EEC479E00DFE727 /* NSDate+SKAdd.m in Sources */,
