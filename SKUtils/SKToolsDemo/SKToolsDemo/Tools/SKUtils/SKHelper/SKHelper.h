@@ -16,7 +16,7 @@
 + (UIViewController *)activityViewController;
 + (UIViewController*)topViewController;
 + (UIViewController*)topViewControllerWithRootViewController:(UIViewController*)rootViewController;
-//获取当前屏幕显示的viewcontroller
+//获取当前view的viewcontroller
 + (UIViewController *)superViewControllerWithView:(UIView *)view;
 
 

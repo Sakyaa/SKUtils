@@ -12,7 +12,6 @@
 @implementation SKHelper
 //获取当前视图控制器
 #pragma mark -- 获取当前的ViewController
-//获取当前屏幕显示的viewcontroller
 // 获取当前处于activity状态的view controller
 + (UIViewController *)activityViewController {
     UIViewController *result = nil;
@@ -59,6 +58,7 @@
     return [SKHelper topViewControllerWithRootViewController:[[UIApplication sharedApplication] keyWindow].rootViewController];
 }
 + (UIViewController*)topViewControllerWithRootViewController:(UIViewController*)rootViewController {
+    
     if ([rootViewController isKindOfClass:[UITabBarController class]]) {
         UITabBarController *tabBarController = (UITabBarController *)rootViewController;
         return [self topViewControllerWithRootViewController:tabBarController.selectedViewController];
