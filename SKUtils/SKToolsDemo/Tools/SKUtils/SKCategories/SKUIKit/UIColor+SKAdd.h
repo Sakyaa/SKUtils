@@ -11,6 +11,10 @@
 @interface UIColor (SKAdd)
 
 
+#ifndef UIColorHex
+#define UIColorHex(_hex_)   [UIColor sk_colorWithHexString:((__bridge NSString *)CFSTR(#_hex_))]
+#endif
+
 /**
  转换color
  @param rgbaValue The rgb value such as 0x66CCFF.
