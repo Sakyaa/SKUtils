@@ -39,22 +39,22 @@ static inline CGFloat CGFloatFromPixel(CGFloat value) {
 
 // main screen's scale
 #ifndef kScreenScale
-#define kScreenScale YYScreenScale()
+#define kScreenScale SKScreenScale()
 #endif
 
 // main screen's size (portrait)
 #ifndef kScreenSize
-#define kScreenSize YYScreenSize()
+#define kScreenSize SKScreenSize()
 #endif
 
 // main screen's width (portrait)
 #ifndef kScreenWidth
-#define kScreenWidth YYScreenSize().width
+#define kScreenWidth SKScreenSize().width
 #endif
 
 // main screen's height (portrait)
 #ifndef kScreenHeight
-#define kScreenHeight YYScreenSize().height
+#define kScreenHeight SKScreenSize().height
 #endif
 
 

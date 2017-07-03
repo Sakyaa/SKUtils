@@ -274,7 +274,7 @@ struct dummy arg = va_arg(args, struct dummy); \
                  */
                 struct dummy {char tmp;};
                 for (int i = 0; i < size; i++) va_arg(args, struct dummy);
-                NSLog(@"YYKit performSelectorWithArgs unsupported type:%s (%lu bytes)",
+                NSLog(@"Kit performSelectorWithArgs unsupported type:%s (%lu bytes)",
                       [sig getArgumentTypeAtIndex:index],(unsigned long)size);
             }
 #undef case_size
