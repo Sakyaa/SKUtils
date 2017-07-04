@@ -7,11 +7,12 @@
 //
 
 #import "ViewController.h"
-#import "SKKitMacro.h"
 #import "SKKit.h"
-#import "CALayer+SKAdd.h"
 
-@interface ViewController ()
+@interface ViewController (){
+        UISlider *_slider1;
+    UIImageView *_fuzzyImageView;
+}
 
 @end
 
@@ -23,14 +24,33 @@
     backView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:backView];
     
-    NSLog(@"%llu",dispatch_time_delay(3));
     CALayer *layer = [CALayer layer];
     layer.backgroundColor = [UIColor redColor].CGColor;
     layer.size = CGSizeMake(100, 1);
     layer.bottom = 3;
     [backView.layer addSublayer:layer];
-
-
+    
+    _fuzzyImageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 70, 300, 200)];
+    [self.view addSubview:_fuzzyImageView];
+    UIImage *image = [UIImage imageNamed:@"desktop.png"];
+   UIImage *blurImage = [image sk_imageByBlurRadius:20 tintColor:[UIColor purpleColor] tintMode:0 saturation:1 maskImage:nil];
+    _fuzzyImageView.image = blurImage;
+    
+    _slider1 = [UISlider new];
+    _slider1.frame = CGRectMake(10, 400, 200, 3);
+    _slider1.minimumValue = 0;
+    _slider1.maximumValue = 20;
+    _slider1.value = 0;
+    [self.view addSubview:_slider1];
+    __weak typeof(self) _self = self;
+    [_slider1 sk_addBlockForControlEvents:UIControlEventValueChanged block:^(id sender) {
+        [_self changed];
+    }];
+}
+- (void)changed {
+    UIImage *image = [UIImage imageNamed:@"desktop.png"];
+    UIImage *blurImage = [image sk_imageByBlurRadius:_slider1.value tintColor:nil tintMode:0 saturation:1 maskImage:nil];
+    _fuzzyImageView.image = blurImage;
 }
 
 

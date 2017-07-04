@@ -57,14 +57,7 @@
     return [[self imageNamed:image] sk_setCircleImage];
 }
 
-- (UIImage *)sk_imageByResizeToSize:(CGSize)size {
-    if (size.width <= 0 || size.height <= 0) return nil;
-    UIGraphicsBeginImageContextWithOptions(size, NO, self.scale);
-    [self drawInRect:CGRectMake(0, 0, size.width, size.height)];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
-}
+
 - (UIImage *)sk_imageByRoundCornerRadius:(CGFloat)radius {
     return [self sk_imageByRoundCornerRadius:radius borderWidth:0 borderColor:nil];
 }
@@ -157,21 +150,21 @@
     CGContextRelease(context);
     return img;
 }
-- (UIImage *)imageByBlurRadius:(CGFloat)blurRadius
-                     tintColor:(UIColor *)tintColor
-                      tintMode:(CGBlendMode)tintBlendMode
-                    saturation:(CGFloat)saturation
-                     maskImage:(UIImage *)maskImage {
+- (UIImage *)sk_imageByBlurRadius:(CGFloat)blurRadius
+                        tintColor:(UIColor *)tintColor
+                         tintMode:(CGBlendMode)tintBlendMode
+                       saturation:(CGFloat)saturation
+                        maskImage:(UIImage *)maskImage {
     if (self.size.width < 1 || self.size.height < 1) {
-        NSLog(@"UIImage+YYAdd error: invalid size: (%.2f x %.2f). Both dimensions must be >= 1: %@", self.size.width, self.size.height, self);
+        NSLog(@"UIImage+SKAdd error: invalid size: (%.2f x %.2f). Both dimensions must be >= 1: %@", self.size.width, self.size.height, self);
         return nil;
     }
     if (!self.CGImage) {
-        NSLog(@"UIImage+YYAdd error: inputImage must be backed by a CGImage: %@", self);
+        NSLog(@"UIImage+SKAdd error: inputImage must be backed by a CGImage: %@", self);
         return nil;
     }
     if (maskImage && !maskImage.CGImage) {
-        NSLog(@"UIImage+YYAdd error: effectMaskImage must be backed by a CGImage: %@", maskImage);
+        NSLog(@"UIImage+SKAdd error: effectMaskImage must be backed by a CGImage: %@", maskImage);
         return nil;
     }
     
@@ -358,21 +351,21 @@ static void sk_cleanupBuffer(void *userData, void *buf_data) {
 
 
 
-- (UIImage *)imageByResizeToWidth:(CGFloat)width {
-    return [self imageByResizeToWidth:width scale:YES];
+- (UIImage *)sk_imageByResizeToWidth:(CGFloat)width {
+    return [self sk_imageByResizeToWidth:width scale:YES];
 }
 
-- (UIImage *)imageByResizeToWidth:(CGFloat)width scale:(BOOL)scale {
+- (UIImage *)sk_imageByResizeToWidth:(CGFloat)width scale:(BOOL)scale {
     if (self.size.width <= 0 || self.size.height <= 0) return nil;
     CGFloat height = width * self.size.height / self.size.width;
-    return [self imageByResizeToSize:CGSizeMake(width, height) scale:scale];
+    return [self sk_imageByResizeToSize:CGSizeMake(width, height) scale:scale];
 }
 
-- (UIImage *)imageByResizeToSize:(CGSize)size {
-    return [self imageByResizeToSize:size scale:YES];
+- (UIImage *)sk_imageByResizeToSize:(CGSize)size {
+    return [self sk_imageByResizeToSize:size scale:YES];
 }
 
-- (UIImage *)imageByResizeToSize:(CGSize)size scale:(BOOL)scale {
+- (UIImage *)sk_imageByResizeToSize:(CGSize)size scale:(BOOL)scale {
     if (size.width <= 0 || size.height <= 0) return nil;
     CGFloat scaleFactor = scale ? self.scale : 1.0;
     UIGraphicsBeginImageContextWithOptions(size, NO, scaleFactor);
@@ -387,7 +380,7 @@ NS_INLINE CGFloat clampCompressionFactor(CGFloat factor) {
     return factor <= 1e-10 ? 1e-10 : factor > 0.1 ? 0.1 : factor;
 }
 
-- (NSData *)compressToJPEGFormatDataWithFactor:(CGFloat)factor maxFileSize:(u_int64_t)fileSize {
+- (NSData *)sk_compressToJPEGFormatDataWithFactor:(CGFloat)factor maxFileSize:(u_int64_t)fileSize {
     if (!self) return nil;
     
     NSData *tempImageData = UIImageJPEGRepresentation(self, 1.0);
@@ -416,19 +409,19 @@ NS_INLINE CGFloat clampCompressionFactor(CGFloat factor) {
     return targetImageData;
 }
 
-- (NSData *)resetImageDataWithImageWidth:(CGFloat)width maxFileSize:(uint64_t)maxFileSize {
+- (NSData *)sk_resetImageDataWithImageWidth:(CGFloat)width maxFileSize:(uint64_t)maxFileSize {
     // Image Size
-    UIImage *newImage = [self imageByResizeToWidth:width];
+    UIImage *newImage = [self sk_imageByResizeToWidth:width];
     
     // File Size
-    return [newImage compressToJPEGFormatDataWithFactor:1e-10 maxFileSize:maxFileSize];
+    return [newImage sk_compressToJPEGFormatDataWithFactor:1e-10 maxFileSize:maxFileSize];
 }
 
-- (NSData *)resetImageDataWithImageSize:(CGSize)size maxFileSize:(uint64_t)maxFileSize {
+- (NSData *)sk_resetImageDataWithImageSize:(CGSize)size maxFileSize:(uint64_t)maxFileSize {
     // Image Size
-    UIImage *newImage = [self imageByResizeToSize:size];
+    UIImage *newImage = [self sk_imageByResizeToSize:size];
     
     // File Size
-    return [newImage compressToJPEGFormatDataWithFactor:1e-10 maxFileSize:maxFileSize];
+    return [newImage sk_compressToJPEGFormatDataWithFactor:1e-10 maxFileSize:maxFileSize];
 }
 @end

@@ -118,9 +118,9 @@
 		364D1D351EFA59E800AC2595 /* NSMutableString+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+Safe.m"; sourceTree = "<group>"; };
 		364D1D361EFA59E800AC2595 /* NSString+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Safe.h"; sourceTree = "<group>"; };
 		364D1D371EFA59E800AC2595 /* NSString+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Safe.m"; sourceTree = "<group>"; };
-		364D1D381EFA59E800AC2595 /* SKKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKKit.h; sourceTree = "<group>"; };
 		364D1D391EFA59E800AC2595 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		364D1D3A1EFA59E800AC2595 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		36EAB6FD1F0B779700B49D5D /* SKKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKKit.h; sourceTree = "<group>"; };
 		36FE8A0C1EE97A4B00E733B8 /* SKToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36FE8A251EE97A4B00E733B8 /* SKToolsDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKToolsDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36FE8A291EE97A4B00E733B8 /* SKToolsDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKToolsDemoTests.m; sourceTree = "<group>"; };
@@ -184,6 +184,7 @@
 		364D1D001EFA59E800AC2595 /* SKUtils */ = {
 			isa = PBXGroup;
 			children = (
+				36EAB6FD1F0B779700B49D5D /* SKKit.h */,
 				364D1D011EFA59E800AC2595 /* SKCategories */,
 				364D1D2A1EFA59E800AC2595 /* SKHelper */,
 				364D1D2D1EFA59E800AC2595 /* SKSafe */,
@@ -281,7 +282,6 @@
 				364D1D351EFA59E800AC2595 /* NSMutableString+Safe.m */,
 				364D1D361EFA59E800AC2595 /* NSString+Safe.h */,
 				364D1D371EFA59E800AC2595 /* NSString+Safe.m */,
-				364D1D381EFA59E800AC2595 /* SKKit.h */,
 			);
 			path = SKSafe;
 			sourceTree = "<group>";

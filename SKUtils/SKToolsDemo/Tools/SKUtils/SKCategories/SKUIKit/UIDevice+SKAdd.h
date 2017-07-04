@@ -12,13 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIDevice (SKAdd)
 /// Device system version (e.g. 8.1)
-+ (double)systemVersion;
++ (double)sk_systemVersion;
 
 /// Whether the device is iPad/iPad mini.
-@property (nonatomic, readonly) BOOL isPad;
+@property (nonatomic, readonly) BOOL sk_isPad;
 
 /// Whether the device is a simulator.
-@property (nonatomic, readonly) BOOL isSimulator;
+@property (nonatomic, readonly) BOOL sk_isSimulator;
 
 @end
 

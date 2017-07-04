@@ -44,7 +44,7 @@
 }
 
 - (BOOL)isPirated {
-    if ([[UIDevice currentDevice] isSimulator]) return YES; // Simulator is not from appstore
+    if ([[UIDevice currentDevice] sk_isSimulator]) return YES; // Simulator is not from appstore
     
     if (getgid() <= 10) return YES; // process ID shouldn't be root
     

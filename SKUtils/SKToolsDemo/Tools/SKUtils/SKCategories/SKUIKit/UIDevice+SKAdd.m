@@ -9,7 +9,15 @@
 #import "UIDevice+SKAdd.h"
 
 @implementation UIDevice (SKAdd)
-- (BOOL)isPad {
++ (double)sk_systemVersion {
+    static double version;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        version = [UIDevice currentDevice].systemVersion.doubleValue;
+    });
+    return version;
+}
+- (BOOL)sk_isPad {
     static dispatch_once_t one;
     static BOOL pad;
     dispatch_once(&one, ^{
@@ -18,7 +26,7 @@
     return pad;
 }
 
-- (BOOL)isSimulator {
+- (BOOL)sk_isSimulator {
 #if TARGET_OS_SIMULATOR
     return YES;
 #else

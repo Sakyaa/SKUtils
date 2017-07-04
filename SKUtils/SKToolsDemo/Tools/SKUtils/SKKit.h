@@ -28,7 +28,6 @@
 #import "NSObject+SKAddForKVO.h"
 #import "NSString+SKAdd.h"
 #import "NSTimer+SKAdd.h"
-#import "SKKitMacro.h"
 #import "UIApplication+SKAdd.h"
 #import "UIColor+SKAdd.h"
 #import "UIControl+SKAdd.h"
@@ -36,4 +35,6 @@
 #import "UIImage+SKAdd.h"
 #import "UIImageView+SKAdd.h"
 #import "UITextField+IndexPath.h"
+
 #import "SKHelper.h"
+#import "SKKitMacro.h"

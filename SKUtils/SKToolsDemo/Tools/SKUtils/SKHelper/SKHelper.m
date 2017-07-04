@@ -134,7 +134,7 @@
 + (NSURL *)saveImage:(UIImage *)currentImage withName:(NSString *)imageName {
     NSData *imageData;
     if (currentImage == nil) return nil;
-    currentImage = [currentImage imageByResizeToWidth:300];
+    currentImage = [currentImage sk_imageByResizeToWidth:300];
     if (UIImagePNGRepresentation(currentImage) == nil) {
         imageData = UIImageJPEGRepresentation(currentImage, 0.5);
     } else {
