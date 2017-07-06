@@ -46,6 +46,12 @@
     [_slider1 sk_addBlockForControlEvents:UIControlEventValueChanged block:^(id sender) {
         [_self changed];
     }];
+    NSString *password = @"123456";
+    NSString *securityPwd = [password sk_aes256_encrypt:@"sk"];
+    NSLog(@"%@",securityPwd);
+    NSString *oldPwd = [securityPwd sk_aes256_decrypt:@"sk"];
+    NSLog(@"%@",oldPwd);
+    
 }
 - (void)changed {
     UIImage *image = [UIImage imageNamed:@"desktop.png"];

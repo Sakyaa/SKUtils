@@ -99,6 +99,23 @@
  Returns an NSString from base64 encoded string.
  */
 + (NSString *)sk_stringWithBase64EncodedString:(NSString *)base64EncodedString;
+/**
+ 加密
+ 
+ @param key 密钥
+ */
+- (NSString *)sk_aes256_encrypt:(NSString *)key;
+
+
+/**
+ 解密
+
+ @param key 密钥
+ */
+- (NSString *)sk_aes256_decrypt:(NSString *)key;
+
+
+
 
 
              //****************转换*****************
