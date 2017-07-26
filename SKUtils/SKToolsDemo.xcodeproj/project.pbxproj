@@ -38,6 +38,12 @@
 		364D1D581EFA59E800AC2595 /* NSMutableString+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D1D351EFA59E800AC2595 /* NSMutableString+Safe.m */; };
 		364D1D591EFA59E800AC2595 /* NSString+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D1D371EFA59E800AC2595 /* NSString+Safe.m */; };
 		364D1D5A1EFA59E800AC2595 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D1D3A1EFA59E800AC2595 /* ViewController.m */; };
+		36A1A7911F2828D900552962 /* NetworkLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1A7901F2828D900552962 /* NetworkLib.m */; };
+		36A1A7981F2828E300552962 /* SKBuildKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1A7941F2828E300552962 /* SKBuildKit.m */; };
+		36A1A7991F2828E300552962 /* SKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1A7971F2828E300552962 /* SKTextField.m */; };
+		36A1A7A31F2828ED00552962 /* BaseRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1A79C1F2828ED00552962 /* BaseRefreshTableViewController.m */; };
+		36A1A7A41F2828ED00552962 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1A79F1F2828ED00552962 /* BaseViewController.m */; };
+		36A1A7A51F2828ED00552962 /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1A7A21F2828ED00552962 /* BaseWebViewController.m */; };
 		36FE8A2A1EE97A4B00E733B8 /* SKToolsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FE8A291EE97A4B00E733B8 /* SKToolsDemoTests.m */; };
 		36FE8A351EE97A4B00E733B8 /* SKToolsDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FE8A341EE97A4B00E733B8 /* SKToolsDemoUITests.m */; };
 /* End PBXBuildFile section */
@@ -119,6 +125,18 @@
 		364D1D371EFA59E800AC2595 /* NSString+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Safe.m"; sourceTree = "<group>"; };
 		364D1D391EFA59E800AC2595 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		364D1D3A1EFA59E800AC2595 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		36A1A78F1F2828D900552962 /* NetworkLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkLib.h; sourceTree = "<group>"; };
+		36A1A7901F2828D900552962 /* NetworkLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkLib.m; sourceTree = "<group>"; };
+		36A1A7931F2828E300552962 /* SKBuildKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKBuildKit.h; sourceTree = "<group>"; };
+		36A1A7941F2828E300552962 /* SKBuildKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKBuildKit.m; sourceTree = "<group>"; };
+		36A1A7961F2828E300552962 /* SKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTextField.h; sourceTree = "<group>"; };
+		36A1A7971F2828E300552962 /* SKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTextField.m; sourceTree = "<group>"; };
+		36A1A79B1F2828ED00552962 /* BaseRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRefreshTableViewController.h; sourceTree = "<group>"; };
+		36A1A79C1F2828ED00552962 /* BaseRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRefreshTableViewController.m; sourceTree = "<group>"; };
+		36A1A79E1F2828ED00552962 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		36A1A79F1F2828ED00552962 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		36A1A7A11F2828ED00552962 /* BaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWebViewController.h; sourceTree = "<group>"; };
+		36A1A7A21F2828ED00552962 /* BaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWebViewController.m; sourceTree = "<group>"; };
 		36EAB6FD1F0B779700B49D5D /* SKKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKKit.h; sourceTree = "<group>"; };
 		36FE8A0C1EE97A4B00E733B8 /* SKToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36FE8A251EE97A4B00E733B8 /* SKToolsDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKToolsDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +193,7 @@
 		364D1CFF1EFA59E800AC2595 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				36A1A78E1F2828D900552962 /* Server */,
 				364D1D001EFA59E800AC2595 /* SKUtils */,
 			);
 			path = Tools;
@@ -183,6 +202,8 @@
 		364D1D001EFA59E800AC2595 /* SKUtils */ = {
 			isa = PBXGroup;
 			children = (
+				36A1A78D1F28284700552962 /* Other */,
+				36A1A78C1F28276100552962 /* Base */,
 				36EAB6FD1F0B779700B49D5D /* SKKit.h */,
 				364D1D011EFA59E800AC2595 /* SKCategories */,
 				364D1D2A1EFA59E800AC2595 /* SKHelper */,
@@ -283,6 +304,79 @@
 				364D1D371EFA59E800AC2595 /* NSString+Safe.m */,
 			);
 			path = SKSafe;
+			sourceTree = "<group>";
+		};
+		36A1A78C1F28276100552962 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				36A1A79A1F2828ED00552962 /* BaseRefreshTableViewController */,
+				36A1A79D1F2828ED00552962 /* BaseViewController */,
+				36A1A7A01F2828ED00552962 /* BaseWebViewController */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		36A1A78D1F28284700552962 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				36A1A7921F2828E300552962 /* SKBuildKit */,
+				36A1A7951F2828E300552962 /* SKTextField */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		36A1A78E1F2828D900552962 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				36A1A78F1F2828D900552962 /* NetworkLib.h */,
+				36A1A7901F2828D900552962 /* NetworkLib.m */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		36A1A7921F2828E300552962 /* SKBuildKit */ = {
+			isa = PBXGroup;
+			children = (
+				36A1A7931F2828E300552962 /* SKBuildKit.h */,
+				36A1A7941F2828E300552962 /* SKBuildKit.m */,
+			);
+			path = SKBuildKit;
+			sourceTree = "<group>";
+		};
+		36A1A7951F2828E300552962 /* SKTextField */ = {
+			isa = PBXGroup;
+			children = (
+				36A1A7961F2828E300552962 /* SKTextField.h */,
+				36A1A7971F2828E300552962 /* SKTextField.m */,
+			);
+			path = SKTextField;
+			sourceTree = "<group>";
+		};
+		36A1A79A1F2828ED00552962 /* BaseRefreshTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36A1A79B1F2828ED00552962 /* BaseRefreshTableViewController.h */,
+				36A1A79C1F2828ED00552962 /* BaseRefreshTableViewController.m */,
+			);
+			path = BaseRefreshTableViewController;
+			sourceTree = "<group>";
+		};
+		36A1A79D1F2828ED00552962 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36A1A79E1F2828ED00552962 /* BaseViewController.h */,
+				36A1A79F1F2828ED00552962 /* BaseViewController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		36A1A7A01F2828ED00552962 /* BaseWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36A1A7A11F2828ED00552962 /* BaseWebViewController.h */,
+				36A1A7A21F2828ED00552962 /* BaseWebViewController.m */,
+			);
+			path = BaseWebViewController;
 			sourceTree = "<group>";
 		};
 		36FE8A031EE97A4B00E733B8 = {
@@ -467,11 +561,16 @@
 				364D1D591EFA59E800AC2595 /* NSString+Safe.m in Sources */,
 				364D1D441EFA59E800AC2595 /* NSData+SKAdd.m in Sources */,
 				364D1D411EFA59E800AC2595 /* main.m in Sources */,
+				36A1A7A51F2828ED00552962 /* BaseWebViewController.m in Sources */,
+				36A1A7A31F2828ED00552962 /* BaseRefreshTableViewController.m in Sources */,
 				364D1D3B1EFA59E800AC2595 /* AppDelegate.m in Sources */,
+				36A1A7A41F2828ED00552962 /* BaseViewController.m in Sources */,
 				364D1D4A1EFA59E800AC2595 /* NSString+SKAdd.m in Sources */,
 				364D1D5A1EFA59E800AC2595 /* ViewController.m in Sources */,
 				364D1D551EFA59E800AC2595 /* NSArray+Safe.m in Sources */,
+				36A1A7981F2828E300552962 /* SKBuildKit.m in Sources */,
 				364D1D461EFA59E800AC2595 /* NSMutableDictionary+SKAdd.m in Sources */,
+				36A1A7911F2828D900552962 /* NetworkLib.m in Sources */,
 				364D1D491EFA59E800AC2595 /* NSObject+SKAddForKVO.m in Sources */,
 				364D1D531EFA59E800AC2595 /* UIView+SKAdd.m in Sources */,
 				364D1D431EFA59E800AC2595 /* SKCGUtilities.m in Sources */,
@@ -485,6 +584,7 @@
 				364D1D4C1EFA59E800AC2595 /* UIApplication+SKAdd.m in Sources */,
 				364D1D4B1EFA59E800AC2595 /* NSTimer+SKAdd.m in Sources */,
 				364D1D521EFA59E800AC2595 /* UITextField+IndexPath.m in Sources */,
+				36A1A7991F2828E300552962 /* SKTextField.m in Sources */,
 				364D1D471EFA59E800AC2595 /* NSNumber+SKAdd.m in Sources */,
 				364D1D4D1EFA59E800AC2595 /* UIColor+SKAdd.m in Sources */,
 			);
