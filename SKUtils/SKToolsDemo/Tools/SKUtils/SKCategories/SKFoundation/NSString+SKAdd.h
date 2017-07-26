@@ -54,6 +54,16 @@
 - (CGFloat)boundingHeightWithSize:(CGSize)size font:(UIFont*)font paragraphStyle:(NSMutableParagraphStyle *)paragraphStyle;
 
 
+
+/**
+ 文字高度
+ @param font 文字型号
+ @param paragraphStyle 文字style
+ */
+- (CGFloat)boundingWidthWithFont:(UIFont *)font
+                  paragraphStyle:(NSMutableParagraphStyle *)paragraphStyle;
+
+
 //*****************判断数据 ****************
 //
 /**
@@ -116,7 +126,8 @@
 
 
 
-
+                /*************去掉空字符串******************/
+- (NSString *)sk_deleteSpace;
 
              //****************转换*****************
 #pragma mark --网址转码 utf－8

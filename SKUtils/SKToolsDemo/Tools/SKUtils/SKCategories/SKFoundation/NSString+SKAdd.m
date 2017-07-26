@@ -180,7 +180,15 @@
     
     return CGSizeMake(ceil(textSize.width), ceil(textSize.height));
 }
-
+- (CGFloat)boundingWidthWithFont:(UIFont *)font
+                  paragraphStyle:(NSMutableParagraphStyle *)paragraphStyle {
+    
+    NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:self];
+    [attributeString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, self.length)];
+    [attributeString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, self.length)];
+    NSStringDrawingOptions options = NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading;
+    return [attributeString boundingRectWithSize:CGSizeMake(MAXFLOAT, 30) options:options context:nil].size.width;
+}
 
 
 + (NSString *)reverseString:(NSString *)strSrc {
@@ -374,6 +382,8 @@
     return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 + (NSString *)stringTransformCoding:(NSString *)string {
     if ([string isKindOfClass:[NSString class]]) {
         string = [string stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -381,6 +391,7 @@
     }
     return string;
 }
+#pragma clang diagnostic pop
 - (NSNumber *)sk_numberValue {
     
     return [NSNumber sk_numberWithString:self];
@@ -434,5 +445,10 @@
     return nil;
 }
 
-
+- (NSString *)sk_deleteSpace {
+    
+    [self stringByReplacingOccurrencesOfString:@" " withString:@""];
+    [self stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    return self;
+}
 @end

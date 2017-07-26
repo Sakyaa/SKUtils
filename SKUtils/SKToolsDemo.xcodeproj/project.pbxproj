@@ -12,7 +12,6 @@
 		364D1D3D1EFA59E800AC2595 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364D1CF81EFA59E800AC2595 /* LaunchScreen.storyboard */; };
 		364D1D3E1EFA59E800AC2595 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364D1CFA1EFA59E800AC2595 /* Main.storyboard */; };
 		364D1D3F1EFA59E800AC2595 /* desktop.png in Resources */ = {isa = PBXBuildFile; fileRef = 364D1CFC1EFA59E800AC2595 /* desktop.png */; };
-		364D1D401EFA59E800AC2595 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 364D1CFD1EFA59E800AC2595 /* Info.plist */; };
 		364D1D411EFA59E800AC2595 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D1CFE1EFA59E800AC2595 /* main.m */; };
 		364D1D421EFA59E800AC2595 /* CALayer+SKAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D1D041EFA59E800AC2595 /* CALayer+SKAdd.m */; };
 		364D1D431EFA59E800AC2595 /* SKCGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D1D061EFA59E800AC2595 /* SKCGUtilities.m */; };
@@ -436,7 +435,6 @@
 				364D1D3F1EFA59E800AC2595 /* desktop.png in Resources */,
 				364D1D3E1EFA59E800AC2595 /* Main.storyboard in Resources */,
 				364D1D3C1EFA59E800AC2595 /* Assets.xcassets in Resources */,
-				364D1D401EFA59E800AC2595 /* Info.plist in Resources */,
 				364D1D3D1EFA59E800AC2595 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
