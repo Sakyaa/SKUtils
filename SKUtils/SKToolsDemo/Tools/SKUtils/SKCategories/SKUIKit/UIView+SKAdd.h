@@ -15,7 +15,7 @@
 /**
  获取当前的控制器
  */
-@property (nullable, nonatomic, readonly) UIViewController *topViewController;
+@property (nullable, nonatomic, readonly) UIViewController *sk_viewController;
 /**
  清除所有子视图
  */

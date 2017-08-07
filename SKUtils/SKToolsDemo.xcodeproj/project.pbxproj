@@ -44,6 +44,7 @@
 		36A1A7A31F2828ED00552962 /* BaseRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1A79C1F2828ED00552962 /* BaseRefreshTableViewController.m */; };
 		36A1A7A41F2828ED00552962 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1A79F1F2828ED00552962 /* BaseViewController.m */; };
 		36A1A7A51F2828ED00552962 /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1A7A21F2828ED00552962 /* BaseWebViewController.m */; };
+		36A1A7AB1F282DFD00552962 /* SKPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1A7AA1F282DFD00552962 /* SKPlaceholderView.m */; };
 		36FE8A2A1EE97A4B00E733B8 /* SKToolsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FE8A291EE97A4B00E733B8 /* SKToolsDemoTests.m */; };
 		36FE8A351EE97A4B00E733B8 /* SKToolsDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FE8A341EE97A4B00E733B8 /* SKToolsDemoUITests.m */; };
 /* End PBXBuildFile section */
@@ -137,6 +138,13 @@
 		36A1A79F1F2828ED00552962 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		36A1A7A11F2828ED00552962 /* BaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWebViewController.h; sourceTree = "<group>"; };
 		36A1A7A21F2828ED00552962 /* BaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWebViewController.m; sourceTree = "<group>"; };
+		36A1A7A91F282DFD00552962 /* SKPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKPlaceholderView.h; sourceTree = "<group>"; };
+		36A1A7AA1F282DFD00552962 /* SKPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKPlaceholderView.m; sourceTree = "<group>"; };
+		36A1A7AF1F283A0500552962 /* TemplateActionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateActionProtocol.h; sourceTree = "<group>"; };
+		36A1A7B01F283A0500552962 /* TemplateCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCellProtocol.h; sourceTree = "<group>"; };
+		36A1A7B11F283A0500552962 /* TemplateRenderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateRenderProtocol.h; sourceTree = "<group>"; };
+		36A1A7B21F283A0500552962 /* TemplateSorbRenderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateSorbRenderProtocol.h; sourceTree = "<group>"; };
+		36A1A7B31F283A0500552962 /* TemplateValidationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateValidationProtocol.h; sourceTree = "<group>"; };
 		36EAB6FD1F0B779700B49D5D /* SKKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKKit.h; sourceTree = "<group>"; };
 		36FE8A0C1EE97A4B00E733B8 /* SKToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36FE8A251EE97A4B00E733B8 /* SKToolsDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKToolsDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -309,6 +317,7 @@
 		36A1A78C1F28276100552962 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				36A1A7AE1F283A0500552962 /* Protocol */,
 				36A1A79A1F2828ED00552962 /* BaseRefreshTableViewController */,
 				36A1A79D1F2828ED00552962 /* BaseViewController */,
 				36A1A7A01F2828ED00552962 /* BaseWebViewController */,
@@ -319,6 +328,7 @@
 		36A1A78D1F28284700552962 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				36A1A7A81F282DFD00552962 /* SKPlaceholderView */,
 				36A1A7921F2828E300552962 /* SKBuildKit */,
 				36A1A7951F2828E300552962 /* SKTextField */,
 			);
@@ -377,6 +387,27 @@
 				36A1A7A21F2828ED00552962 /* BaseWebViewController.m */,
 			);
 			path = BaseWebViewController;
+			sourceTree = "<group>";
+		};
+		36A1A7A81F282DFD00552962 /* SKPlaceholderView */ = {
+			isa = PBXGroup;
+			children = (
+				36A1A7A91F282DFD00552962 /* SKPlaceholderView.h */,
+				36A1A7AA1F282DFD00552962 /* SKPlaceholderView.m */,
+			);
+			path = SKPlaceholderView;
+			sourceTree = "<group>";
+		};
+		36A1A7AE1F283A0500552962 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				36A1A7AF1F283A0500552962 /* TemplateActionProtocol.h */,
+				36A1A7B01F283A0500552962 /* TemplateCellProtocol.h */,
+				36A1A7B11F283A0500552962 /* TemplateRenderProtocol.h */,
+				36A1A7B21F283A0500552962 /* TemplateSorbRenderProtocol.h */,
+				36A1A7B31F283A0500552962 /* TemplateValidationProtocol.h */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		36FE8A031EE97A4B00E733B8 = {
@@ -566,6 +597,7 @@
 				364D1D3B1EFA59E800AC2595 /* AppDelegate.m in Sources */,
 				36A1A7A41F2828ED00552962 /* BaseViewController.m in Sources */,
 				364D1D4A1EFA59E800AC2595 /* NSString+SKAdd.m in Sources */,
+				36A1A7AB1F282DFD00552962 /* SKPlaceholderView.m in Sources */,
 				364D1D5A1EFA59E800AC2595 /* ViewController.m in Sources */,
 				364D1D551EFA59E800AC2595 /* NSArray+Safe.m in Sources */,
 				36A1A7981F2828E300552962 /* SKBuildKit.m in Sources */,

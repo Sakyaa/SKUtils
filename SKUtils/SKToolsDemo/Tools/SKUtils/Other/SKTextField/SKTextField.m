@@ -46,8 +46,8 @@
 - (void)initTextField {
     
     //font
-    self.font = FONT_16;
-    self.tintColor = COLOR_BLUE_SYSTEM;
+    self.font = [UIFont systemFontOfSize:16];
+    self.tintColor = [UIColor blueColor];
     
     [self setClearButtonMode:UITextFieldViewModeWhileEditing];
     UIView *space;
@@ -62,8 +62,8 @@
     }  else if (_textFiledStyle == SKTextFieldImageStyle) {
         
         self.layer.borderWidth = 0.5f;
-        self.layer.cornerRadius = ControlsCornerRadius;
-        self.layer.borderColor = COLOR_GRAY_BORDER.CGColor;
+        self.layer.cornerRadius = 4.0f;
+        self.layer.borderColor = [UIColor redColor].CGColor;
 
         space = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _spaceViewWidth, self.frame.size.height)];
         UIImageView *imageView=[[UIImageView alloc] initWithFrame:CGRectMake(15, (self.frame.size.height - 18)/2, 18, 18)];

@@ -10,7 +10,7 @@
 
 @implementation UIView (SKAdd)
 
-- (UIViewController *)topViewController {
+- (UIViewController *)sk_viewController {
     for (UIView *view = self; view; view = view.superview) {
         UIResponder *nextResponder = [view nextResponder];
         if ([nextResponder isKindOfClass:[UIViewController class]]) {

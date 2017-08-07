@@ -100,7 +100,7 @@
     [tableView setTableFooterView:[[UIView alloc] init]];
     [tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [tableView setShowsVerticalScrollIndicator:NO];
-    [tableView setBackgroundColor:COLOR_GRAY_SYSTEM_BACKGROUNDCOLOR];
+    [tableView setBackgroundColor:[UIColor whiteColor]];
     if (superview) [superview addSubview:tableView];
     return tableView;
 }

@@ -18,6 +18,8 @@
 @end
 
 @implementation BaseRefreshTableViewController
+/**
+
 - (instancetype)initWithStyle:(UITableViewStyle)style
 {
     self = [super init];
@@ -41,7 +43,7 @@
     _tableView.dataSource = self;
     _tableView.tableFooterView = self.defaultFooterView;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    _tableView.backgroundColor = COLOR_GRAY_SYSTEM_BACKGROUNDCOLOR;
+    _tableView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:_tableView];
     
     _page = 0;
@@ -216,6 +218,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+ */
 
 /*
  #pragma mark - Navigation

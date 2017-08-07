@@ -7,16 +7,15 @@
 //
 
 #import "NetworkLib.h"
-#import <AFNetworking.h>
-#import <AFNetworkReachabilityManager.h>
-#import "DefineSeverConst.h"
+//#import <AFNetworking.h>
+//#import <AFNetworkReachabilityManager.h>
 
 
-static AFNetworkReachabilityManager *networkManager;
+//static AFNetworkReachabilityManager *networkManager;
 
 
 @implementation NetworkLib
-
+/**
 + (void)requestServer:(HTTP_METHED)methed
                   url:(NSString *)path
             parameter:(NSDictionary *)param
@@ -242,6 +241,6 @@ static AFNetworkReachabilityManager *networkManager;
     [[AFNetworkReachabilityManager sharedManager] stopMonitoring];
     
 }
-
+*/
 
 @end

@@ -9,7 +9,7 @@
 #import "SKPlaceholderView.h"
 
 
-#define IMAGEVIEWSIZE SKXFrom6(100)
+#define IMAGEVIEWSITSIZE SKXFrom6(100)
 
 @interface SKPlaceholderView () {
     
@@ -24,14 +24,14 @@
 
 
 @implementation SKPlaceholderView
-
+/**
 - (instancetype)initWithFrame:(CGRect)frame placeholderType:(SKPlaceholderViewType)placeholderType {
     
     self = [super initWithFrame:frame];
     if (self) {
         
         _viewType = placeholderType;
-        self.backgroundColor = SystemGrayBackgroundColor;
+        self.backgroundColor = [UIColor whiteColor];
         [self initCustomView];
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGsetureDetected:)];
         [self addGestureRecognizer:tapGesture];
@@ -60,7 +60,7 @@
     
     if (_viewType == SKPlaceholderViewSimpleType) {
         
-        CGFloat imgHeight = IMAGEVIEWSIZE ;
+        CGFloat imgHeight = IMAGEVIEWSITSIZE ;
         if (CGRectGetHeight(self.frame) < kScreen_Height/2) {
             imgHeight = imgHeight * CGRectGetHeight(self.frame) * 2 / kScreen_Height;
         }
@@ -129,5 +129,6 @@
         [_delegate placeholderViewButtonActionDetected:nil];
     }
 }
+ */
 
 @end

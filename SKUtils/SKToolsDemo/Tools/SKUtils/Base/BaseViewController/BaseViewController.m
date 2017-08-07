@@ -181,6 +181,21 @@
 {
     return UIStatusBarStyleLightContent;
 }
+/**
+ //设置表头跟随cell滚动
+ - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+ if (scrollView == _ScaleTableView)
+ {
+ 
+ CGFloat sectionHeaderHeight = 120;
+ if (scrollView.contentOffset.y<=sectionHeaderHeight&&scrollView.contentOffset.y>=0) {
+ scrollView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0);
+ } else if (scrollView.contentOffset.y>=sectionHeaderHeight) {
+ scrollView.contentInset = UIEdgeInsetsMake(-sectionHeaderHeight, 0, 0, 0);
+ }
+ }
+ }
+ */
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
