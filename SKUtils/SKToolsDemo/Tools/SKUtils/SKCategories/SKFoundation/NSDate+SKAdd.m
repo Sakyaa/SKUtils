@@ -96,4 +96,16 @@
     });
     return [formatter dateFromString:dateString];
 }
++ (NSDate *)sk_dateWithString:(NSString *)dateString format:(NSString *)format {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setLocale:[NSLocale currentLocale]];
+    [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
+    [dateFormatter setDateFormat:format];
+    NSDate *date = [dateFormatter dateFromString:dateString];
+#if ! __has_feature(objc_arc)
+    [dateFormatter release];
+#endif
+    return date;
+}
+
 @end

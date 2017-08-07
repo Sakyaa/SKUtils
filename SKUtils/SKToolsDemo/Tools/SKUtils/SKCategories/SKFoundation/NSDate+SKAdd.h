@@ -34,4 +34,6 @@
 //字符串转date
 + (NSDate *)sk_dateWithISOFormatString:(NSString *)dateString;
 
++ (NSDate *)sk_dateWithString:(NSString *)dateString format:(NSString *)format;
+
 @end
