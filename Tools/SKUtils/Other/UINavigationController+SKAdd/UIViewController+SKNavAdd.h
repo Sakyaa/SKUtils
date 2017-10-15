@@ -14,4 +14,6 @@
 - (void)sk_setNeedsNavigationGroundColor:(UIColor *)backgroundColor
                                    alpha:(CGFloat)alpha;
 
+- (void)sk_setNeedsNavigationReset;
+
 @end

@@ -20,12 +20,11 @@
 - (CGFloat)heightWithFont:(UIFont *)font constrainedToWidth:(CGFloat)width;
 
 /**
- 文字高度
+ 文字宽度
  @param font 大小
  @param height 最大高度
  */
 - (CGFloat)widthWithFont:(UIFont *)font constrainedToHeight:(CGFloat)height;
-
 /**
  *  @brief 计算文字的大小
  *
@@ -51,7 +50,9 @@
  @param font 文字型号
  @param paragraphStyle 文字的style  可行距  缩紧类型
  */
-- (CGFloat)boundingHeightWithSize:(CGSize)size font:(UIFont*)font paragraphStyle:(NSMutableParagraphStyle *)paragraphStyle;
+- (CGFloat)boundingHeightWithSize:(CGSize)size
+                             font:(UIFont*)font
+                   paragraphStyle:(NSMutableParagraphStyle *)paragraphStyle;
 
 
 

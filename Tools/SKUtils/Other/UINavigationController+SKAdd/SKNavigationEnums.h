@@ -11,25 +11,25 @@
 
 
 
-typedef NS_ENUM(NSUInteger, UIContentStyle) {
+typedef NS_ENUM(NSUInteger, UISKContentStyle) {
     /**
      *  Automatically chooses and colors text-based elements with the shade that best contrasts its @c backgroundColor.
      *
      *  @since 2.0
      */
-    UIContentStyleContrast,
+    UISKContentStyleContrast,
     /**
      *  Colors text-based elements using a light shade.
      *
      *  @since 2.0
      */
-    UIContentStyleLight,
+    UISKContentStyleLight,
     /**
      *  Colors text-based elements using a light shade.
      *
      *  @since 2.0
      */
-    UIContentStyleDark
+    UISKContentStyleDark
 };
 
 #endif /* SKNavigationEnums_h */

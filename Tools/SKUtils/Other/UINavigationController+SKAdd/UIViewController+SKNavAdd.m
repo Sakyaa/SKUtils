@@ -28,4 +28,7 @@
     self.navigationController.hidesHairline = YES;
     [self.navigationController.navigationBar sk_setNeedsNavigationBarGroundColor:backgroundColor alpha:alpha];
 }
+- (void)sk_setNeedsNavigationReset {
+    [self.navigationController.navigationBar lt_reset];
+}
 @end
