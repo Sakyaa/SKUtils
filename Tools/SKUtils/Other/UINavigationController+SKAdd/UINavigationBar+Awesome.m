@@ -8,7 +8,7 @@
 
 #import "UINavigationBar+Awesome.h"
 #import <objc/runtime.h>
-#import "UINavigationController+Chameleon.h"
+#import "UINavigationController+SKAdd.h"
 
 @implementation SKNavigationBarManager
 

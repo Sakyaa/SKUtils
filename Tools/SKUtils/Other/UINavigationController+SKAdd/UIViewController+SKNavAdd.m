@@ -8,7 +8,7 @@
 
 #import "UIViewController+SKNavAdd.h"
 #import "UINavigationBar+Awesome.h"
-#import "UINavigationController+Chameleon.h"
+#import "UINavigationController+SKAdd.h"
 
 
 @implementation UIViewController (SKNavAdd)
@@ -17,7 +17,7 @@
 
     
     
-    self.navigationController.hidesNavigationBarHairline = YES;
+    self.navigationController.hidesHairline = YES;
     [self.navigationController.navigationBar sk_setNeedsNavigationBarGroundColorAlpha:alpha];
 
 
@@ -25,7 +25,7 @@
 - (void)sk_setNeedsNavigationGroundColor:(UIColor *)backgroundColor
                                    alpha:(CGFloat)alpha {
 
-    self.navigationController.hidesNavigationBarHairline = NO;
+    self.navigationController.hidesHairline = YES;
     [self.navigationController.navigationBar sk_setNeedsNavigationBarGroundColor:backgroundColor alpha:alpha];
 }
 @end

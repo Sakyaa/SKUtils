@@ -20,6 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
     UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(20, 64, 200, 50)];
     backView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:backView];
