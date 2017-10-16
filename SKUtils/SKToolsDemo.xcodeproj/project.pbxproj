@@ -312,6 +312,7 @@
 		36E0D7711F93041B00AF933D /* UINavigationController+SKAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SKAdd.h"; sourceTree = "<group>"; };
 		36E0D7721F93041B00AF933D /* UINavigationController+SKAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SKAdd.m"; sourceTree = "<group>"; };
 		36E0D7741F93060000AF933D /* SKNavigationEnums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKNavigationEnums.h; sourceTree = "<group>"; };
+		36FE1C4B1F94477A00E79736 /* SKLayoutConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKLayoutConst.h; sourceTree = "<group>"; };
 		36FE8A0C1EE97A4B00E733B8 /* SKToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36FE8A251EE97A4B00E733B8 /* SKToolsDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKToolsDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36FE8A291EE97A4B00E733B8 /* SKToolsDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKToolsDemoTests.m; sourceTree = "<group>"; };
@@ -715,6 +716,7 @@
 		36E0D70D1F93039F00AF933D /* SKHelper */ = {
 			isa = PBXGroup;
 			children = (
+				36FE1C4B1F94477A00E79736 /* SKLayoutConst.h */,
 				36E0D70E1F93039F00AF933D /* SKHelper.h */,
 				36E0D70F1F93039F00AF933D /* SKHelper.m */,
 			);

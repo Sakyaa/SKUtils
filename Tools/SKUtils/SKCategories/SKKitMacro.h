@@ -32,6 +32,39 @@ SK_EXTERN_C_BEGIN
 #endif
 
 
+//消除警告的宏
+//#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Wdocumentation"
+//#pragma clang diagnostic pop
+
+//1.parameter '%0' not found in the function declaration
+#define NS_SUPPRESS_PARAMETERNOTFOUND_USE(expr)   _Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wdeprecated-declarations\"")\
+expr\
+_Pragma("clang diagnostic pop")\
+
+//2.C-style parameters in Objective-C method declarations is deprecated
+#define NS_SUPPRESS_DECLARATIONS_USE(expr) _Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wdeprecated-declarations\"")\
+expr\
+
+
+/**
+ 取消自动适配 ScrollView 的 Insets 行为
+ @param scrollView 滑动视图
+ @param vc 所在控制器
+ */
+#define SKDisbaleAutoAdjustScrollViewInsets(scrollView, vc)\
+do { \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wdeprecated-declarations\"") \
+if (@available(iOS 11.0,*))  {\
+scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;\
+} else {\
+vc.automaticallyAdjustsScrollViewInsets = NO;\
+}\
+_Pragma("clang diagnostic pop")\
+} while (0);
 /**
  Synthsize a weak  reference.
  
