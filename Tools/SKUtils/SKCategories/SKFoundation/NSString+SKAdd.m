@@ -9,6 +9,8 @@
 #import "NSString+SKAdd.h"
 #import "NSData+SKAdd.h"
 #import "NSNumber+SKAdd.h"
+#import <CommonCrypto/CommonDigest.h>
+
 
 
 @implementation NSString (SKAdd)
@@ -18,8 +20,7 @@
  *  @param font  字体(默认为系统字体)
  *  @param width 约束宽度
  */
-- (CGFloat)heightWithFont:(UIFont *)font constrainedToWidth:(CGFloat)width
-{
+- (CGFloat)heightWithFont:(UIFont *)font constrainedToWidth:(CGFloat)width {
     UIFont *textFont = font ? font : [UIFont systemFontOfSize:[UIFont systemFontSize]];
     
     CGSize textSize;
@@ -444,7 +445,62 @@
     }
     return nil;
 }
+//SHA1加密
+- (NSString *)sk_sha1EncryptWithKey:(NSString *)key {
+    const char *cstr = [key cStringUsingEncoding:NSUTF8StringEncoding];
+    NSData *data = [NSData dataWithBytes:cstr length:key.length];
+    uint8_t digest[CC_SHA1_DIGEST_LENGTH];
+    CC_SHA1(data.bytes, (CC_LONG)data.length, digest);
+    NSMutableString* output = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
+    for(int i = 0; i < CC_SHA1_DIGEST_LENGTH; i++)
+        [output appendFormat:@"%02x", digest[i]];
+    return output;
+}
+//SHA224加密
+- (NSString *)sk_sha224EncryptWithKey:(NSString *)key {
+    const char *cstr = [key cStringUsingEncoding:NSUTF8StringEncoding];
+    NSData *data = [NSData dataWithBytes:cstr length:key.length];
+    uint8_t digest[CC_SHA224_DIGEST_LENGTH];
+    CC_SHA224(data.bytes, (CC_LONG)data.length, digest);
+    NSMutableString* output = [NSMutableString stringWithCapacity:CC_SHA224_DIGEST_LENGTH * 2];
+    for(int i = 0; i < CC_SHA224_DIGEST_LENGTH; i++)
+        [output appendFormat:@"%02x", digest[i]];
+    return output;
+}
+//SHA256加密
+- (NSString *)sk_sha256EncryptWithKey:(NSString *)key {
+    const char *cstr = [key cStringUsingEncoding:NSUTF8StringEncoding];
+    NSData *data = [NSData dataWithBytes:cstr length:key.length];
+    uint8_t digest[CC_SHA256_DIGEST_LENGTH];
+    CC_SHA256(data.bytes, (CC_LONG)data.length, digest);
+    NSMutableString* output = [NSMutableString stringWithCapacity:CC_SHA256_DIGEST_LENGTH * 2];
+    for(int i = 0; i < CC_SHA256_DIGEST_LENGTH; i++)
+        [output appendFormat:@"%02x", digest[i]];
+    return output;
+}
 
+//SHA384加密
+- (NSString *)sk_sha384EncryptWithKey:(NSString *)key {
+    const char *cstr = [key cStringUsingEncoding:NSUTF8StringEncoding];
+    NSData *data = [NSData dataWithBytes:cstr length:key.length];
+    uint8_t digest[CC_SHA384_DIGEST_LENGTH];
+    CC_SHA384(data.bytes, (CC_LONG)data.length, digest);
+    NSMutableString* output = [NSMutableString stringWithCapacity:CC_SHA384_DIGEST_LENGTH * 2];
+    for(int i = 0; i < CC_SHA384_DIGEST_LENGTH; i++)
+        [output appendFormat:@"%02x", digest[i]];
+    return output;
+}
+//SHA512加密
+- (NSString *)sk_sha512EncryptWithKey:(NSString *)key {
+    const char *cstr = [key cStringUsingEncoding:NSUTF8StringEncoding];
+    NSData *data = [NSData dataWithBytes:cstr length:key.length];
+    uint8_t digest[CC_SHA512_DIGEST_LENGTH];
+    CC_SHA512(data.bytes, (CC_LONG)data.length, digest);
+    NSMutableString* output = [NSMutableString stringWithCapacity:CC_SHA512_DIGEST_LENGTH * 2];
+    for(int i = 0; i < CC_SHA512_DIGEST_LENGTH; i++)
+        [output appendFormat:@"%02x", digest[i]];
+    return output;
+}
 - (NSString *)sk_deleteSpace {
     
     [self stringByReplacingOccurrencesOfString:@" " withString:@""];

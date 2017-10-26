@@ -8,12 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "SKEnumManagement.h"
 
 @interface SKHelper : NSObject
 
-
-//版本升级管理
-+ (void)appVersionDetected;
 
 
 //获取视图
@@ -60,11 +58,17 @@
                 addView:(UIView *)addView;
 
 
+
++(NSString *)dateStringWithTimeInterval:(double)stampTime
+                              timeStyle:(SKTimeStyle)style;
 /**
  字符串转时间戳项目中用到
  @param dateString 日期字符串
  */
 + (NSTimeInterval)timeIntervalWithString:(NSString *)dateString;
++ (NSTimeInterval)timeIntervalWithString:(NSString *)dateString
+                               timeStyle:(SKTimeStyle)style;
+
 
 //统一收键盘
 + (void)sk_closeKeyboard;

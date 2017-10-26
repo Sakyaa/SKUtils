@@ -31,6 +31,8 @@ SK_EXTERN_C_BEGIN
 #define SK_SWAP(_a_, _b_)  do { __typeof__(_a_) _tmp_ = (_a_); (_a_) = (_b_); (_b_) = _tmp_; } while (0)
 #endif
 
+#define SKAssert(condition, description, ...) NSAssert((condition), (description), ##__VA_ARGS__)
+#define SKCAssert(condition, description, ...) NSCAssert((condition), (description), ##__VA_ARGS__)
 
 //消除警告的宏
 //#pragma clang diagnostic push

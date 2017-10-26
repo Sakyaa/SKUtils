@@ -9,6 +9,8 @@
 
 #import <Foundation/Foundation.h>
 
+//tool
+#import "SKEnumManagement.h"
 
 //safe
 #import "NSArray+Safe.h"

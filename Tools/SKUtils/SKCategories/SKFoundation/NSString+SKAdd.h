@@ -98,34 +98,55 @@
  Returns a lowercase NSString for md5 hash.
  */
 - (NSString *)sk_md5String;
+
 // @name Encode and decode
 ///=============================================================================
 
 /**
+ 加密
  Returns an NSString for base64 encoded.
  */
 - (NSString *)sk_base64EncodedString;
-
 /**
+ 解密
  Returns an NSString from base64 encoded string.
  */
 + (NSString *)sk_stringWithBase64EncodedString:(NSString *)base64EncodedString;
 /**
  加密
- 
  @param key 密钥
  */
 - (NSString *)sk_aes256_encrypt:(NSString *)key;
-
-
 /**
  解密
-
  @param key 密钥
  */
 - (NSString *)sk_aes256_decrypt:(NSString *)key;
-
-
+/**
+ SHA1加密
+ @param key 密文
+ */
+- (NSString *)sk_sha1EncryptWithKey:(NSString *)key;
+/**
+ SHA224加密
+ @param key 密文
+ */
+- (NSString *)sk_sha224EncryptWithKey:(NSString *)key;
+/**
+ SHA256加密
+ @param key 密文
+ */
+- (NSString *)sk_sha256EncryptWithKey:(NSString *)key;
+/**
+ SHA384加密
+ @param key 密文
+ */
+- (NSString *)sk_sha384EncryptWithKey:(NSString *)key;
+/**
+ SHA512加密
+ @param key 密文
+ */
+- (NSString *)sk_sha512EncryptWithKey:(NSString *)key;
 
                 /*************去掉空字符串******************/
 - (NSString *)sk_deleteSpace;
@@ -138,8 +159,6 @@
 + (NSString *)stringTransformCoding:(NSString *)string;
 
 - (NSNumber *)sk_numberValue;
-
-
 - (NSString *)sk_stringByTrim;
 
 @end

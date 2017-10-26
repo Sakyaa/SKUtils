@@ -14,6 +14,7 @@
 		364D1D3F1EFA59E800AC2595 /* desktop.png in Resources */ = {isa = PBXBuildFile; fileRef = 364D1CFC1EFA59E800AC2595 /* desktop.png */; };
 		364D1D411EFA59E800AC2595 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D1CFE1EFA59E800AC2595 /* main.m */; };
 		364D1D5A1EFA59E800AC2595 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D1D3A1EFA59E800AC2595 /* ViewController.m */; };
+		36663DCC1F989B7D00856702 /* AppManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 36663DCB1F989B7D00856702 /* AppManagement.m */; };
 		36E0D71C1F93039F00AF933D /* NetworkLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E0D64F1F93039F00AF933D /* NetworkLib.m */; };
 		36E0D71D1F93039F00AF933D /* BaseRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E0D6541F93039F00AF933D /* BaseRefreshTableViewController.m */; };
 		36E0D71E1F93039F00AF933D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E0D6571F93039F00AF933D /* BaseViewController.m */; };
@@ -130,6 +131,9 @@
 		364D1CFE1EFA59E800AC2595 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		364D1D391EFA59E800AC2595 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		364D1D3A1EFA59E800AC2595 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		36663DC51F988ECA00856702 /* SKEnumManagement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKEnumManagement.h; sourceTree = "<group>"; };
+		36663DCA1F989B7D00856702 /* AppManagement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppManagement.h; sourceTree = "<group>"; };
+		36663DCB1F989B7D00856702 /* AppManagement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppManagement.m; sourceTree = "<group>"; };
 		36E0D64E1F93039F00AF933D /* NetworkLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkLib.h; sourceTree = "<group>"; };
 		36E0D64F1F93039F00AF933D /* NetworkLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkLib.m; sourceTree = "<group>"; };
 		36E0D6531F93039F00AF933D /* BaseRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRefreshTableViewController.h; sourceTree = "<group>"; };
@@ -365,6 +369,15 @@
 			path = SKToolsDemo;
 			sourceTree = "<group>";
 		};
+		36663DCD1F989BA200856702 /* AppManagement */ = {
+			isa = PBXGroup;
+			children = (
+				36663DCA1F989B7D00856702 /* AppManagement.h */,
+				36663DCB1F989B7D00856702 /* AppManagement.m */,
+			);
+			path = AppManagement;
+			sourceTree = "<group>";
+		};
 		36E0D64C1F93039F00AF933D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -450,6 +463,7 @@
 		36E0D6611F93039F00AF933D /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				36663DCD1F989BA200856702 /* AppManagement */,
 				36E0D6621F93039F00AF933D /* Chameleon */,
 				36E0D67E1F93039F00AF933D /* SKBuildKit */,
 				36E0D6DF1F93039F00AF933D /* UINavigationController+SKAdd */,
@@ -719,6 +733,7 @@
 				36FE1C4B1F94477A00E79736 /* SKLayoutConst.h */,
 				36E0D70E1F93039F00AF933D /* SKHelper.h */,
 				36E0D70F1F93039F00AF933D /* SKHelper.m */,
+				36663DC51F988ECA00856702 /* SKEnumManagement.h */,
 			);
 			path = SKHelper;
 			sourceTree = "<group>";
@@ -971,6 +986,7 @@
 				36E0D7431F93039F00AF933D /* CAAnimations+LinkBlock.m in Sources */,
 				36E0D72E1F93039F00AF933D /* JSManagedValue+LinkBlock.m in Sources */,
 				36E0D7591F93039F00AF933D /* CALayer+SKAdd.m in Sources */,
+				36663DCC1F989B7D00856702 /* AppManagement.m in Sources */,
 				36E0D7351F93039F00AF933D /* NSMutableArray+LinkBlock.m in Sources */,
 				36E0D7521F93039F00AF933D /* UIView+LinkBlock.m in Sources */,
 				36E0D7471F93039F00AF933D /* UIButton+LinkBlock.m in Sources */,

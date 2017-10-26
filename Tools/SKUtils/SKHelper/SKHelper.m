@@ -12,53 +12,6 @@
 
 @implementation SKHelper
 
-+ (void)appVersionDetected {
-    
-    NSString *url = [[NSString alloc] initWithFormat:@"http://itunes.apple.com/lookup?id=%@",@"appid"];
-    [self postPath:url];
-}
-+ (void)postPath:(NSString *)path {
-    
-    NSURL *url = [NSURL URLWithString:path];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
-                                                           cachePolicy:NSURLRequestReloadIgnoringCacheData
-                                                       timeoutInterval:10];
-    [request setHTTPMethod:@"POST"];
-    NSOperationQueue *queue = [NSOperationQueue new];
-    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response,NSData *data,NSError *error){
-        NSMutableDictionary *receiveStatusDic=[[NSMutableDictionary alloc]init];
-        if (data) {
-            NSDictionary *receiveDic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
-            if ([[receiveDic valueForKey:@"resultCount"] integerValue]>0) {
-                [receiveStatusDic setValue:@"1" forKey:@"status"];
-                [receiveStatusDic setValue:[[[receiveDic valueForKey:@"results"] objectAtIndex:0] valueForKey:@"version"]   forKey:@"version"];
-            } else {
-                [receiveStatusDic setValue:@"-1" forKey:@"status"];
-            }
-        } else {
-            [receiveStatusDic setValue:@"-1" forKey:@"status"];
-        }
-        
-        [self performSelectorOnMainThread:@selector(receiveData:) withObject:receiveStatusDic waitUntilDone:NO];
-    }];
-}
-+ (void)receiveData:(id)sender {
-    
-    NSString *newVersion = [sender objectForKey:@"version"];
-    NSString *oldVersion = [UIApplication sharedApplication].appVersion;
-    if ([oldVersion compare:newVersion options:NSNumericSearch] ==NSOrderedDescending) {
-        NSLog(@"%@ is bigger",oldVersion);
-        
-    } else if ([newVersion isEqualToString:oldVersion]) {
-       
-        NSLog(@"%@ is equal %@",newVersion,oldVersion);
-    } else {
-        
-        NSLog(@"%@ is bigger ",newVersion);
-    }
-
-    
-}
 //获取当前视图控制器
 #pragma mark -- 获取当前的ViewController
 // 获取当前处于activity状态的view controller
@@ -204,22 +157,67 @@
     addView.layer.mask = maskLayer;
     
 }
+
+#pragma mark -- time
+//时间戳转化为时间字符串
++(NSString *)dateStringWithTimeInterval:(double)stampTime
+                              timeStyle:(SKTimeStyle)style {
+    NSAssert(stampTime > 0, @"less than 0");
+    NSString *stampTimeStr = [NSString stringWithFormat:@"%f",stampTime];
+    if ([stampTimeStr length] > 10) stampTime = [[stampTimeStr substringWithRange:NSMakeRange(0, 10)] doubleValue];
+    NSTimeInterval time= stampTime;
+    NSDate *detaildate=[NSDate dateWithTimeIntervalSince1970:time];
+    NSString *dateString = [[SKHelper dataFormatTimeStyle:style] stringFromDate: detaildate];
+    return dateString;
+}
+//时间字符串转换为时间戳
 + (NSTimeInterval)timeIntervalWithString:(NSString *)dateString {
     if (!dateString) return 0;
-    
-    static NSDateFormatter *formatterGetData;
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        formatterGetData = [[NSDateFormatter alloc] init];
-        [formatterGetData setDateFormat:@"yyyy/MM-dd HH:mm:ss"];
-        [formatterGetData setLocale:[NSLocale currentLocale]];
-    });
-    
-    NSDate *getDate = [formatterGetData dateFromString:dateString];
+    NSDate *getDate = [[SKHelper dataFormatTimeStyle:SKTimeAllContainsNormalStyle] dateFromString:dateString];
     NSTimeInterval getTimeIntervla = [getDate timeIntervalSince1970];
     return getTimeIntervla;
 }
++ (NSTimeInterval)timeIntervalWithString:(NSString *)dateString
+                               timeStyle:(SKTimeStyle)style {
+    if (!dateString) return 0;
+    NSDate *getDate = [[SKHelper dataFormatTimeStyle:style] dateFromString:dateString];
+    NSTimeInterval getTimeIntervla = [getDate timeIntervalSince1970];
+    return getTimeIntervla;
+}
++ (NSDateFormatter *)dataFormatTimeStyle:(SKTimeStyle)style {
+    
+    NSDateFormatter *transferFormatter;
+    if (style == SKTimeAllContainsNormalStyle) {
+        static NSDateFormatter *formatterGetData;
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            formatterGetData = [[NSDateFormatter alloc] init];
+            [formatterGetData setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+            [formatterGetData setLocale:[NSLocale currentLocale]];
+        });
+        transferFormatter = formatterGetData;
+    } else if (style == SKTimeAllContainsSlashStyle) {
+        static NSDateFormatter *formatterGetData;
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            formatterGetData = [[NSDateFormatter alloc] init];
+            [formatterGetData setDateFormat:@"yyyy/MM-dd HH:mm:ss"];
+            [formatterGetData setLocale:[NSLocale currentLocale]];
+        });
+        transferFormatter = formatterGetData;
+    } else if (style == SKTimeMonthDayHourSecondStyle) {
+        static NSDateFormatter *formatterGetData;
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            formatterGetData = [[NSDateFormatter alloc] init];
+            [formatterGetData setDateFormat:@"MM-dd HH:mm:ss"];
+            [formatterGetData setLocale:[NSLocale currentLocale]];
+        });
+        transferFormatter = formatterGetData;
+    }
+    return transferFormatter;
+}
+#pragma mark -- system
 + (void)sk_closeKeyboard {
     [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
 }
