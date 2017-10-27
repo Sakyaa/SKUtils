@@ -137,6 +137,7 @@
  @param key 密文
  */
 - (NSString *)sk_sha256EncryptWithKey:(NSString *)key;
+- (NSString *)sk_sha256Encrypt;
 /**
  SHA384加密
  @param key 密文
@@ -160,5 +161,8 @@
 
 - (NSNumber *)sk_numberValue;
 - (NSString *)sk_stringByTrim;
+
+//表情筛选
+- (BOOL)stringContainsEmoji:(NSString *)string;
 
 @end
