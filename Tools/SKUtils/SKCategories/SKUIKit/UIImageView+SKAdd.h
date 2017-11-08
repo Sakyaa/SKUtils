@@ -35,6 +35,6 @@
  @param placeholderImageName 占位图
  */
 - (void)sk_setImageUrl:(NSString *)url
-     RoundCornerRadius:(CGFloat)radius
+     roundCornerRadius:(CGFloat)radius
   placeholderImageName:(NSString *)placeholderImageName;
 @end

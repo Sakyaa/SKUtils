@@ -138,11 +138,8 @@
     //    yes升序    no降序大到小
     
     NSSortDescriptor *reversedSorter = [NSSortDescriptor sortDescriptorWithKey:key ascending:sequence];
-    
     NSMutableArray *descriptors = [NSMutableArray arrayWithObjects:&reversedSorter count:1];
-    
     NSArray *middleArray = [originalArray sortedArrayUsingDescriptors:descriptors];
-    
     NSMutableArray *sendArray = [NSMutableArray arrayWithArray:middleArray];
     return sendArray;
 }

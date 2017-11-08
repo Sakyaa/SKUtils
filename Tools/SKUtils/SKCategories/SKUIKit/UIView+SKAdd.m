@@ -27,99 +27,99 @@
 
 
 
-- (CGFloat)sk_left {
+- (CGFloat)left {
     return self.frame.origin.x;
 }
 
-- (void)setSk_left:(CGFloat)sk_left {
+- (void)setLeft:(CGFloat)x {
     CGRect frame = self.frame;
-    frame.origin.x = sk_left;
+    frame.origin.x = x;
     self.frame = frame;
 }
 
-- (CGFloat)sk_top {
+- (CGFloat)top {
     return self.frame.origin.y;
 }
 
-- (void)setSk_top:(CGFloat)sk_top {
+- (void)setTop:(CGFloat)y {
     CGRect frame = self.frame;
-    frame.origin.y = sk_top;
+    frame.origin.y = y;
     self.frame = frame;
 }
 
-- (CGFloat)sk_right {
+- (CGFloat)right {
     return self.frame.origin.x + self.frame.size.width;
 }
 
-- (void)setSk_right:(CGFloat)sk_right {
+- (void)setRight:(CGFloat)right {
     CGRect frame = self.frame;
-    frame.origin.x = sk_right - frame.size.width;
+    frame.origin.x = right - frame.size.width;
     self.frame = frame;
 }
 
-- (CGFloat)sk_bottom {
+- (CGFloat)bottom {
     return self.frame.origin.y + self.frame.size.height;
 }
 
-- (void)setSk_bottom:(CGFloat)sk_bottom {
+- (void)setBottom:(CGFloat)bottom {
     CGRect frame = self.frame;
-    frame.origin.y = sk_bottom - frame.size.height;
+    frame.origin.y = bottom - frame.size.height;
     self.frame = frame;
 }
 
-- (CGFloat)sk_width {
+- (CGFloat)width {
     return self.frame.size.width;
 }
 
-- (void)setSk_width:(CGFloat)sk_width {
+- (void)setWidth:(CGFloat)width {
     CGRect frame = self.frame;
-    frame.size.width = sk_width;
+    frame.size.width = width;
     self.frame = frame;
 }
 
-- (CGFloat)sk_height {
+- (CGFloat)height {
     return self.frame.size.height;
 }
 
-- (void)setSk_height:(CGFloat)sk_height {
+- (void)setHeight:(CGFloat)height {
     CGRect frame = self.frame;
-    frame.size.height = sk_height;
+    frame.size.height = height;
     self.frame = frame;
 }
 
-- (CGFloat)sk_centerX {
+- (CGFloat)centerX {
     return self.center.x;
 }
 
-- (void)setSk_centerX:(CGFloat)sk_centerX {
-    self.center = CGPointMake(sk_centerX, self.center.y);
+- (void)setCenterX:(CGFloat)centerX {
+    self.center = CGPointMake(centerX, self.center.y);
 }
 
-- (CGFloat)sk_centerY {
+- (CGFloat)centerY {
     return self.center.y;
 }
 
-- (void)setSk_centerY:(CGFloat)sk_centerY {
-    self.center = CGPointMake(self.center.x, sk_centerY);
+- (void)setCenterY:(CGFloat)centerY {
+    self.center = CGPointMake(self.center.x, centerY);
 }
 
-- (CGPoint)sk_origin {
+- (CGPoint)origin {
     return self.frame.origin;
 }
 
-- (void)setSk_origin:(CGPoint)sk_origin {
+- (void)setOrigin:(CGPoint)origin {
     CGRect frame = self.frame;
-    frame.origin = sk_origin;
+    frame.origin = origin;
     self.frame = frame;
 }
 
-- (CGSize)sk_size {
+- (CGSize)size {
     return self.frame.size;
 }
 
-- (void)setSk_size:(CGSize)sk_size {
+- (void)setSize:(CGSize)size {
     CGRect frame = self.frame;
-    frame.size = sk_size;
+    frame.size = size;
     self.frame = frame;
 }
 

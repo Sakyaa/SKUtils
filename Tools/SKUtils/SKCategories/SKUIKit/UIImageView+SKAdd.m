@@ -28,23 +28,24 @@
         placeholderImageName:(NSString *)placeholderImageName {
     
 #if __has_include(<SDWebImage.h>)
-    
+    @weakify(self);
     [self sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:placeholderImageName] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         if (image == nil) return;
+        @strongify(self);
         self.image = [image sk_setCircleImage];
     }];
 #endif
 }
 - (void)sk_setImageUrl:(NSString *)url
-     RoundCornerRadius:(CGFloat)radius
+     roundCornerRadius:(CGFloat)radius
   placeholderImageName:(NSString *)placeholderImageName {
     
 #if __has_include(<SDWebImage.h>)
-    
+    @weakify(self);
     [self sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:placeholderImageName] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         if (image == nil) return;
+        @strongify(self);
         self.image = [image sk_imageByRoundCornerRadius:radius];
-
     }];
 #endif
 }

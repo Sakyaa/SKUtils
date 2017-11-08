@@ -502,7 +502,7 @@
     return output;
 }
 - (NSString *)sk_sha256Encrypt {
-    const char *s = [self cStringUsingEncoding:NSASCIIStringEncoding];
+    const char *s = [self cStringUsingEncoding:NSUTF8StringEncoding];
     NSData *keyData = [NSData dataWithBytes:s length:strlen(s)];
     
     uint8_t digest[CC_SHA256_DIGEST_LENGTH] = {0};
