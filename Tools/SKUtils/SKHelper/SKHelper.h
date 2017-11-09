@@ -23,10 +23,14 @@
 + (UIViewController *)superViewControllerWithView:(UIView *)view;
 
 
-//获取图片的url
-// *  将图片存入沙盒
-+ (NSURL *)saveImage:(UIImage *)currentImage
-            withName:(NSString *)imageName;
+
+/**
+ 图片上传压缩
+
+ @param image 图片
+ @param maxLength 需要压缩的阀值
+ */
++ (NSData *)compressImage:(UIImage *)image toByte:(NSUInteger)maxLength;
 /**
  *  将文件存入沙盒
  *

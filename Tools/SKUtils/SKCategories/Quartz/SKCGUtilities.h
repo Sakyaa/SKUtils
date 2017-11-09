@@ -36,6 +36,16 @@ static inline CGFloat CGFloatToPixel(CGFloat value) {
 static inline CGFloat CGFloatFromPixel(CGFloat value) {
     return value / SKScreenScale();
 }
+/// round point value for pixel-aligned
+static inline CGFloat CGFloatPixelRound(CGFloat value) {
+    CGFloat scale = SKScreenScale();
+    return round(value * scale) / scale;
+}
+
+/// Convert CALayer's gravity string to UIViewContentMode.
+UIViewContentMode SKCAGravityToUIViewContentMode(NSString *gravity);
+/// Convert UIViewContentMode to CALayer's gravity string.
+NSString *SKUIViewContentModeToCAGravity(UIViewContentMode contentMode);
 
 // main screen's scale
 #ifndef kScreenScale
