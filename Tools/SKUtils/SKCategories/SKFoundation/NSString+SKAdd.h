@@ -165,4 +165,8 @@
 //表情筛选
 - (BOOL)stringContainsEmoji:(NSString *)string;
 
+        /*************域名解析******************/
+- (NSString *)sk_ipResolutionDomainName;
+
+
 @end
