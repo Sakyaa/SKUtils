@@ -41,14 +41,12 @@
 
 /**attributedString*/
 + (UILabel *)labelAttributedText:(NSMutableAttributedString *)text
-                backgroundColor:(UIColor *)backgroundColor
-                   textAligment:(NSTextAlignment)textAligment
-                  numberOfLines:(NSInteger)numberOfLines{
+                 backgroundColor:(UIColor *)backgroundColor
+                   numberOfLines:(NSInteger)numberOfLines {
     UILabel *label = [[UILabel alloc] init];
     label.backgroundColor = backgroundColor;
-    label.attributedText = text;
+    if (text) label.attributedText = text;
     label.numberOfLines = numberOfLines;
-    label.textAlignment = textAligment;
     return label;
     
 }

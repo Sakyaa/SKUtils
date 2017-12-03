@@ -14,20 +14,18 @@
  *text
  */
 + (UILabel *)labelBackgroundColor:(UIColor *)backgroundColor
-                       textColor:(UIColor *)textColor
-                    textAligment:(NSTextAlignment)textAligment
-                   numberOfLines:(NSInteger)numberOfLines
-                            text:(NSString *)text
-                            font:(UIFont *)font;
+                        textColor:(UIColor *)textColor
+                     textAligment:(NSTextAlignment)textAligment
+                    numberOfLines:(NSInteger)numberOfLines
+                             text:(NSString *)text
+                             font:(UIFont *)font;
 
 /*
  *attributedString
  */
 + (UILabel *)labelAttributedText:(NSMutableAttributedString *)text
-                backgroundColor:(UIColor *)backgroundColor
-                   textAligment:(NSTextAlignment)textAligment
-                  numberOfLines:(NSInteger)numberOfLines;
-
+                 backgroundColor:(UIColor *)backgroundColor
+                   numberOfLines:(NSInteger)numberOfLines;
 
 /**
  返回 eAttributedString
@@ -76,3 +74,4 @@
                            target:(id)target
                            action:(SEL)action;
 @end
+
