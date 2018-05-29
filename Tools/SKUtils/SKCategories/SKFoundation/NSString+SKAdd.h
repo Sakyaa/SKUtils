@@ -168,5 +168,11 @@
         /*************域名解析******************/
 - (NSString *)sk_ipResolutionDomainName;
 
+#pragma mark --getter
+/**
+ 创建唯一识别码
+ @return 返回唯一UUID
+ */
++ (NSString *)sk_UUID;
 
 @end
