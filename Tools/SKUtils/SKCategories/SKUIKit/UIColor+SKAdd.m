@@ -36,6 +36,12 @@
     }
     return nil;
 }
++ (UIColor *)sk_colorWithRed:(NSInteger)red
+                       green:(NSInteger)green
+                        blue:(NSInteger)blue
+                       alpha:(CGFloat)alpha {
+    return [UIColor colorWithRed:(float) red / 255.0f green:(float) green / 255.0f blue:(float) blue / 255.0f alpha:alpha];
+}
 static BOOL skHexStrToRGBA(NSString *str,
                          CGFloat *r, CGFloat *g, CGFloat *b, CGFloat *a) {
     str = [[str sk_stringByTrim] uppercaseString];

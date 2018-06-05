@@ -23,6 +23,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy, readonly) NSString *sk_machineModelName;
 
+/**
+ 运营商名字
+ */
+@property (nonatomic, copy, readonly) NSString *sk_carrier;
+
+
 @end
 
 #ifndef kSystemVersion

@@ -9,6 +9,9 @@
 #import "UIDevice+SKAdd.h"
 #include <sys/sysctl.h>
 
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+#import <CoreTelephony/CTCarrier.h>
+
 @implementation UIDevice (SKAdd)
 + (double)sk_systemVersion {
     static double version;
@@ -26,13 +29,26 @@
     });
     return pad;
 }
-
 - (BOOL)sk_isSimulator {
 #if TARGET_OS_SIMULATOR
     return YES;
 #else
     return NO;
 #endif
+}
+- (NSString *)sk_carrier {
+    //获取本机运营商名称
+    CTTelephonyNetworkInfo *info = [[CTTelephonyNetworkInfo alloc] init];
+    CTCarrier *carrier = [info subscriberCellularProvider];
+    //当前手机所属运营商名称
+    NSString *mobile;
+    //先判断有没有SIM卡，如果没有则不获取本机运营商
+    if (!carrier.isoCountryCode) {
+        mobile = @"无运营商";
+    } else {
+        mobile = [carrier carrierName];
+    }
+    return mobile;
 }
 - (NSString *)sk_machineModelName {
     static dispatch_once_t one;
@@ -122,7 +138,6 @@
         if (!name) name = model;
     });
     return name;
-
 }
 - (NSString *)machineModel {
     static dispatch_once_t one;
