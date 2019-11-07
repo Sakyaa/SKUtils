@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		361683952374065B00035880 /* UIViewController+SKAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 361683942374065B00035880 /* UIViewController+SKAdd.m */; };
+		361683982374066E00035880 /* UINavigationBar+SKAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 361683972374066E00035880 /* UINavigationBar+SKAdd.m */; };
+		3616839B2374068600035880 /* UINavigationController+SKAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3616839A2374068600035880 /* UINavigationController+SKAdd.m */; };
 		364D1D3B1EFA59E800AC2595 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D1CF61EFA59E800AC2595 /* AppDelegate.m */; };
 		364D1D3C1EFA59E800AC2595 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 364D1CF71EFA59E800AC2595 /* Assets.xcassets */; };
 		364D1D3D1EFA59E800AC2595 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364D1CF81EFA59E800AC2595 /* LaunchScreen.storyboard */; };
@@ -18,8 +21,6 @@
 		36E0D71E1F93039F00AF933D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E0D6571F93039F00AF933D /* BaseViewController.m */; };
 		36E0D71F1F93039F00AF933D /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E0D65A1F93039F00AF933D /* BaseWebViewController.m */; };
 		36E0D72C1F93039F00AF933D /* SKBuildKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E0D6811F93039F00AF933D /* SKBuildKit.m */; };
-		36E0D7571F93039F00AF933D /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E0D6E11F93039F00AF933D /* UINavigationBar+Awesome.m */; };
-		36E0D7581F93039F00AF933D /* UIViewController+SKNavAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E0D6E31F93039F00AF933D /* UIViewController+SKNavAdd.m */; };
 		36E0D7591F93039F00AF933D /* CALayer+SKAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E0D6E71F93039F00AF933D /* CALayer+SKAdd.m */; };
 		36E0D75A1F93039F00AF933D /* SKCGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E0D6E91F93039F00AF933D /* SKCGUtilities.m */; };
 		36E0D75B1F93039F00AF933D /* NSData+SKAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E0D6EC1F93039F00AF933D /* NSData+SKAdd.m */; };
@@ -44,7 +45,6 @@
 		36E0D76E1F93039F00AF933D /* NSMutableDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E0D7171F93039F00AF933D /* NSMutableDictionary+Safe.m */; };
 		36E0D76F1F93039F00AF933D /* NSMutableString+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E0D7191F93039F00AF933D /* NSMutableString+Safe.m */; };
 		36E0D7701F93039F00AF933D /* NSString+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E0D71B1F93039F00AF933D /* NSString+Safe.m */; };
-		36E0D7731F93041B00AF933D /* UINavigationController+SKAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E0D7721F93041B00AF933D /* UINavigationController+SKAdd.m */; };
 		36FE8A2A1EE97A4B00E733B8 /* SKToolsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FE8A291EE97A4B00E733B8 /* SKToolsDemoTests.m */; };
 		36FE8A351EE97A4B00E733B8 /* SKToolsDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FE8A341EE97A4B00E733B8 /* SKToolsDemoUITests.m */; };
 /* End PBXBuildFile section */
@@ -67,6 +67,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		361683932374065B00035880 /* UIViewController+SKAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SKAdd.h"; sourceTree = "<group>"; };
+		361683942374065B00035880 /* UIViewController+SKAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SKAdd.m"; sourceTree = "<group>"; };
+		361683962374066E00035880 /* UINavigationBar+SKAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+SKAdd.h"; sourceTree = "<group>"; };
+		361683972374066E00035880 /* UINavigationBar+SKAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+SKAdd.m"; sourceTree = "<group>"; };
+		361683992374068600035880 /* UINavigationController+SKAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SKAdd.h"; sourceTree = "<group>"; };
+		3616839A2374068600035880 /* UINavigationController+SKAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SKAdd.m"; sourceTree = "<group>"; };
 		364D1CF51EFA59E800AC2595 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		364D1CF61EFA59E800AC2595 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		364D1CF71EFA59E800AC2595 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,10 +97,6 @@
 		36E0D6601F93039F00AF933D /* TemplateValidationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateValidationProtocol.h; sourceTree = "<group>"; };
 		36E0D6801F93039F00AF933D /* SKBuildKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKBuildKit.h; sourceTree = "<group>"; };
 		36E0D6811F93039F00AF933D /* SKBuildKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKBuildKit.m; sourceTree = "<group>"; };
-		36E0D6E01F93039F00AF933D /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
-		36E0D6E11F93039F00AF933D /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
-		36E0D6E21F93039F00AF933D /* UIViewController+SKNavAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SKNavAdd.h"; sourceTree = "<group>"; };
-		36E0D6E31F93039F00AF933D /* UIViewController+SKNavAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SKNavAdd.m"; sourceTree = "<group>"; };
 		36E0D6E61F93039F00AF933D /* CALayer+SKAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+SKAdd.h"; sourceTree = "<group>"; };
 		36E0D6E71F93039F00AF933D /* CALayer+SKAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+SKAdd.m"; sourceTree = "<group>"; };
 		36E0D6E81F93039F00AF933D /* SKCGUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKCGUtilities.h; sourceTree = "<group>"; };
@@ -145,8 +147,6 @@
 		36E0D7191F93039F00AF933D /* NSMutableString+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+Safe.m"; sourceTree = "<group>"; };
 		36E0D71A1F93039F00AF933D /* NSString+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Safe.h"; sourceTree = "<group>"; };
 		36E0D71B1F93039F00AF933D /* NSString+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Safe.m"; sourceTree = "<group>"; };
-		36E0D7711F93041B00AF933D /* UINavigationController+SKAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SKAdd.h"; sourceTree = "<group>"; };
-		36E0D7721F93041B00AF933D /* UINavigationController+SKAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SKAdd.m"; sourceTree = "<group>"; };
 		36E0D7741F93060000AF933D /* SKNavigationEnums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKNavigationEnums.h; sourceTree = "<group>"; };
 		36FE1C4B1F94477A00E79736 /* SKLayoutConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKLayoutConst.h; sourceTree = "<group>"; };
 		36FE8A0C1EE97A4B00E733B8 /* SKToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -302,13 +302,13 @@
 		36E0D6DF1F93039F00AF933D /* UINavigationController+SKAdd */ = {
 			isa = PBXGroup;
 			children = (
-				36E0D6E01F93039F00AF933D /* UINavigationBar+Awesome.h */,
-				36E0D6E11F93039F00AF933D /* UINavigationBar+Awesome.m */,
-				36E0D7711F93041B00AF933D /* UINavigationController+SKAdd.h */,
-				36E0D7721F93041B00AF933D /* UINavigationController+SKAdd.m */,
-				36E0D6E21F93039F00AF933D /* UIViewController+SKNavAdd.h */,
-				36E0D6E31F93039F00AF933D /* UIViewController+SKNavAdd.m */,
 				36E0D7741F93060000AF933D /* SKNavigationEnums.h */,
+				361683932374065B00035880 /* UIViewController+SKAdd.h */,
+				361683942374065B00035880 /* UIViewController+SKAdd.m */,
+				361683962374066E00035880 /* UINavigationBar+SKAdd.h */,
+				361683972374066E00035880 /* UINavigationBar+SKAdd.m */,
+				361683992374068600035880 /* UINavigationController+SKAdd.h */,
+				3616839A2374068600035880 /* UINavigationController+SKAdd.m */,
 			);
 			path = "UINavigationController+SKAdd";
 			sourceTree = "<group>";
@@ -586,16 +586,15 @@
 			files = (
 				36E0D7691F93039F00AF933D /* UITextField+IndexPath.m in Sources */,
 				36E0D76E1F93039F00AF933D /* NSMutableDictionary+Safe.m in Sources */,
+				361683952374065B00035880 /* UIViewController+SKAdd.m in Sources */,
 				36E0D7631F93039F00AF933D /* UIApplication+SKAdd.m in Sources */,
 				36E0D75E1F93039F00AF933D /* NSNumber+SKAdd.m in Sources */,
 				36E0D7681F93039F00AF933D /* UIImageView+SKAdd.m in Sources */,
-				36E0D7581F93039F00AF933D /* UIViewController+SKNavAdd.m in Sources */,
 				36E0D72C1F93039F00AF933D /* SKBuildKit.m in Sources */,
 				36E0D71F1F93039F00AF933D /* BaseWebViewController.m in Sources */,
 				36E0D7601F93039F00AF933D /* NSObject+SKAddForKVO.m in Sources */,
 				36E0D7671F93039F00AF933D /* UIImage+SKAdd.m in Sources */,
 				36E0D7701F93039F00AF933D /* NSString+Safe.m in Sources */,
-				36E0D7571F93039F00AF933D /* UINavigationBar+Awesome.m in Sources */,
 				36E0D71E1F93039F00AF933D /* BaseViewController.m in Sources */,
 				36E0D76B1F93039F00AF933D /* SKHelper.m in Sources */,
 				36E0D76D1F93039F00AF933D /* NSMutableArray+Safe.m in Sources */,
@@ -614,10 +613,11 @@
 				36E0D7621F93039F00AF933D /* NSTimer+SKAdd.m in Sources */,
 				36E0D7661F93039F00AF933D /* UIDevice+SKAdd.m in Sources */,
 				36E0D76C1F93039F00AF933D /* NSArray+Safe.m in Sources */,
+				361683982374066E00035880 /* UINavigationBar+SKAdd.m in Sources */,
 				36E0D7611F93039F00AF933D /* NSString+SKAdd.m in Sources */,
+				3616839B2374068600035880 /* UINavigationController+SKAdd.m in Sources */,
 				36E0D75B1F93039F00AF933D /* NSData+SKAdd.m in Sources */,
 				36E0D7641F93039F00AF933D /* UIColor+SKAdd.m in Sources */,
-				36E0D7731F93041B00AF933D /* UINavigationController+SKAdd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

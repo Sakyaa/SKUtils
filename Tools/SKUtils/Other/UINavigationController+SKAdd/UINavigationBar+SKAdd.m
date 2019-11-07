@@ -1,12 +1,12 @@
 //
-//  UINavigationBar+Awesome.m
-//  LTNavigationBar
+//  UINavigationBar+SKAdd.m
+//  SKToolsDemo
 //
-//  Created by ltebean on 15-2-15.
-//  Copyright (c) 2015 ltebean. All rights reserved.
+//  Created by Sakya on 2019/11/7.
+//  Copyright © 2019 Sakya. All rights reserved.
 //
 
-#import "UINavigationBar+Awesome.h"
+#import "UINavigationBar+SKAdd.h"
 #import <objc/runtime.h>
 #import "UINavigationController+SKAdd.h"
 
@@ -23,24 +23,19 @@
 
 @end
 
-
 #define SYSTEM_VERSION_LESS_THAN(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 
-@implementation UINavigationBar (Awesome)
+@implementation UINavigationBar (SKAdd)
 static char overlayKey;
-
-- (UIView *)overlay
-{
+- (UIView *)overlay {
     return objc_getAssociatedObject(self, &overlayKey);
 }
 
-- (void)setOverlay:(UIView *)overlay
-{
+- (void)setOverlay:(UIView *)overlay {
     objc_setAssociatedObject(self, &overlayKey, overlay, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (void)lt_setBackgroundColor:(UIColor *)backgroundColor
-{
+- (void)sk_setBackgroundColor:(UIColor *)backgroundColor {
     if (!self.overlay) {
         [self setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
         self.overlay = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) + 20)];
@@ -51,13 +46,11 @@ static char overlayKey;
     self.overlay.backgroundColor = backgroundColor;
 }
 
-- (void)lt_setTranslationY:(CGFloat)translationY
-{
+- (void)sk_setTranslationY:(CGFloat)translationY {
     self.transform = CGAffineTransformMakeTranslation(0, translationY);
 }
 
-- (void)lt_setElementsAlpha:(CGFloat)alpha
-{
+- (void)sk_setElementsAlpha:(CGFloat)alpha {
     //在iOS 11 之下才有用
     [[self valueForKey:@"_leftViews"] enumerateObjectsUsingBlock:^(UIView *view, NSUInteger i, BOOL *stop) {
         view.alpha = alpha;
@@ -69,7 +62,7 @@ static char overlayKey;
     
     UIView *titleView = [self valueForKey:@"_titleView"];
     titleView.alpha = alpha;
-//    when viewController first load, the titleView maybe nil
+    //    when viewController first load, the titleView maybe nil
     [[self subviews] enumerateObjectsUsingBlock:^(UIView *obj, NSUInteger idx, BOOL *stop) {
         if ([obj isKindOfClass:NSClassFromString(@"UINavigationItemView")]) {
             obj.alpha = alpha;
@@ -78,12 +71,12 @@ static char overlayKey;
             obj.alpha = alpha;
         }
     }];
-
 }
-- (void)lt_reset {
+
+- (void)sk_reset {
     [self setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
-//   设置导航条黑线出现
-//    self.sk_viewController.navigationController.hidesNavigationBarHairline = NO;
+    //   设置导航条黑线出现
+    //    self.sk_viewController.navigationController.hidesNavigationBarHairline = NO;
     [self.overlay removeFromSuperview];
     self.overlay = nil;
 }
@@ -91,11 +84,12 @@ static char overlayKey;
 #pragma mark -- sk
 //additional
 - (void)sk_setNeedsNavigationBarGroundColorAlpha:(CGFloat)alpha {
-    [self lt_setBackgroundColor:[[SKNavigationBarManager sharedManager].barColor colorWithAlphaComponent:alpha]];
+    [self sk_setBackgroundColor:[[SKNavigationBarManager sharedManager].barColor colorWithAlphaComponent:alpha]];
 }
+
 - (void)sk_setNeedsNavigationBarGroundColor:(UIColor *)backgroundColor
                                       alpha:(CGFloat)alpha {
-    [self lt_setBackgroundColor:[backgroundColor colorWithAlphaComponent:alpha]];
+    [self sk_setBackgroundColor:[backgroundColor colorWithAlphaComponent:alpha]];
 }
 
 @end

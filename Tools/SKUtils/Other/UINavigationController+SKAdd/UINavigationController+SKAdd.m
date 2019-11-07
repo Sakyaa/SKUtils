@@ -2,8 +2,8 @@
 //  UINavigationController+SKAdd.m
 //  SKToolsDemo
 //
-//  Created by Sakya on 2017/10/15.
-//  Copyright © 2017年 Sakya. All rights reserved.
+//  Created by Sakya on 2019/11/7.
+//  Copyright © 2019 Sakya. All rights reserved.
 //
 
 #import "UINavigationController+SKAdd.h"
@@ -13,16 +13,12 @@
 
 const UIStatusBarStyle UISKStatusBarStyleContrast = 100;
 
-
 @interface UINavigationController ()
-
 @property (readwrite) BOOL shouldContrast;
 @property (readwrite) BOOL shouldUseLightContent;
-
 @end
 
 @implementation UINavigationController (SKAdd)
-
 @dynamic hidesHairline;
 
 #pragma mark - Swizzling
@@ -117,7 +113,7 @@ const UIStatusBarStyle UISKStatusBarStyleContrast = 100;
     return [number boolValue];
 }
 - (void)setHidesHairline:(BOOL)hidesHairline {
-   
+    
     NSNumber *number = [NSNumber numberWithBool:hidesHairline];
     objc_setAssociatedObject(self, @selector(hidesHairline), number, OBJC_ASSOCIATION_RETAIN);
     

@@ -1,19 +1,22 @@
 //
-//  UIViewController+SKNavAdd.h
-//  LTNavigationBar
+//  UIViewController+SKAdd.h
+//  SKToolsDemo
 //
-//  Created by Sakya on 2017/10/11.
-//  Copyright © 2017年 ltebean. All rights reserved.
+//  Created by Sakya on 2019/11/7.
+//  Copyright © 2019 Sakya. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UIViewController (SKNavAdd)
+NS_ASSUME_NONNULL_BEGIN
+
+@interface UIViewController (SKAdd)
 //additional
 - (void)sk_setNeedsNavigationGroundColorAlpha:(CGFloat)alpha;
 - (void)sk_setNeedsNavigationGroundColor:(UIColor *)backgroundColor
                                    alpha:(CGFloat)alpha;
 
 - (void)sk_setNeedsNavigationReset;
-
 @end
+
+NS_ASSUME_NONNULL_END

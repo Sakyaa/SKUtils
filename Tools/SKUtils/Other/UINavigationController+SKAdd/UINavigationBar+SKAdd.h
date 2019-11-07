@@ -1,13 +1,14 @@
 //
-//  UINavigationBar+Awesome.h
-//  LTNavigationBar
+//  UINavigationBar+SKAdd.h
+//  SKToolsDemo
 //
-//  Created by ltebean on 15-2-15.
-//  Copyright (c) 2015 ltebean. All rights reserved.
+//  Created by Sakya on 2019/11/7.
+//  Copyright © 2019 Sakya. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
 
 @interface SKNavigationBarManager : NSObject
 + (SKNavigationBarManager *)sharedManager;
@@ -16,14 +17,15 @@
 
 @end
 
-@interface UINavigationBar (Awesome)
-- (void)lt_setBackgroundColor:(UIColor *)backgroundColor;
-- (void)lt_setElementsAlpha:(CGFloat)alpha;
-- (void)lt_setTranslationY:(CGFloat)translationY;
-- (void)lt_reset;
+@interface UINavigationBar (SKAdd)
+- (void)sk_setBackgroundColor:(UIColor *)backgroundColor;
+- (void)sk_setElementsAlpha:(CGFloat)alpha;
+- (void)sk_setTranslationY:(CGFloat)translationY;
+- (void)sk_reset;
 //additional
 - (void)sk_setNeedsNavigationBarGroundColorAlpha:(CGFloat)alpha;
 - (void)sk_setNeedsNavigationBarGroundColor:(UIColor *)backgroundColor
-                                   alpha:(CGFloat)alpha;
-
+                                      alpha:(CGFloat)alpha;
 @end
+
+NS_ASSUME_NONNULL_END
